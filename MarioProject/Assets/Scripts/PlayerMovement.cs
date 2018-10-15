@@ -56,11 +56,4 @@ public class PlayerMovement : MonoBehaviour {
             m_RigidBody.velocity = new Vector2(-maxSpeed, m_RigidBody.velocity.y);
         }
     }
-    void OnTriggerEnter2D(Collider2D trig)
-    {
-        if (trig.gameObject.tag == "Brick")
-        {
-            Destroy(trig.gameObject);
-        }
-    }
 }
