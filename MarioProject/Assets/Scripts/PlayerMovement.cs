@@ -8,8 +8,9 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpPower = 200f;
     public bool grounded;
     private Rigidbody2D m_RigidBody;
-
     private Animator m_Animator;
+
+    private float moveVel;
 
     void Start()
     {
@@ -54,6 +55,21 @@ public class PlayerMovement : MonoBehaviour {
         if (m_RigidBody.velocity.x < -maxSpeed)
         {
             m_RigidBody.velocity = new Vector2(-maxSpeed, m_RigidBody.velocity.y);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.transform.tag == "MovingPlatform")
+        {
+            transform.parent = other.transform;
+        }
+    }
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.transform.tag == "MovingPlatform")
+        {
+            transform.parent = null;
         }
     }
 }
