@@ -36,22 +36,22 @@ public class PlayerMove2 : MonoBehaviour {
         {
             m_RigidBody.velocity = new Vector2(m_RigidBody.velocity.x, jumpHeight);
         }
-        //moveVel = 0f;
+        moveVel = 0f;
         //move Right
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            m_RigidBody.velocity = new Vector2(moveSpeed, m_RigidBody.velocity.y);
-            //moveVel = moveSpeed;
+            //m_RigidBody.velocity = new Vector2(moveSpeed, m_RigidBody.velocity.y);
+            moveVel = moveSpeed;
         }
 
         //move Left
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            m_RigidBody.velocity = new Vector2(-moveSpeed, m_RigidBody.velocity.y);
-            //moveVel = -moveSpeed;
+            //m_RigidBody.velocity = new Vector2(-moveSpeed, m_RigidBody.velocity.y);
+            moveVel = -moveSpeed;
         }
 
-        //m_RigidBody.velocity = new Vector2(moveVel, m_RigidBody.velocity.y);
+        m_RigidBody.velocity = new Vector2(moveVel, m_RigidBody.velocity.y);
 
         //flips player
         if (m_RigidBody.velocity.x > 0)
