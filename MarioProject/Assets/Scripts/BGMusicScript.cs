@@ -5,9 +5,14 @@ using UnityEngine;
 public class BGMusicScript : MonoBehaviour {
 
     public AudioSource bgMusicSource;
-    private bool audioBegin = false;
+    public AudioSource exitSceneMusicSource;
 
     void Awake() {
         bgMusicSource.Play();
+    }
+
+    public void ExitScene() {
+        bgMusicSource.Stop();
+        exitSceneMusicSource.Play();
     }
 }
