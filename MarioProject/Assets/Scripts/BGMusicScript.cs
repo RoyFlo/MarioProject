@@ -8,10 +8,6 @@ public class BGMusicScript : MonoBehaviour {
     private bool audioBegin = false;
 
     void Awake() {
-        if(!audioBegin) {
-            bgMusicSource.Play();
-            DontDestroyOnLoad(gameObject);
-            audioBegin = true;
-        }
+        bgMusicSource.Play();
     }
 }
