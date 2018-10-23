@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public string nextSceneLoad;
     public string nextLevel;
-
     public string nextLevelName;
     public string topBarNextLevelName;
     public string score;
@@ -30,6 +28,6 @@ public class LevelManager : MonoBehaviour {
     IEnumerator OnTriggerEnter2D(Collider2D collider) {
         bgMusic.ExitScene();
         yield return new WaitForSeconds(6);
-        SceneManager.LoadScene(nextSceneLoad);
+        SceneManager.LoadScene("LevelLoadScene");
     }
 }

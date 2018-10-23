@@ -6,19 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevelScript : MonoBehaviour {
 
-    public static string nextLevelScene = "World1-1";
-
-    public static string levelName = "World 1-1";
-    public static string topBarLevelName = "1-1";
-    public static string score = "000000";
-    public static string livesLeft = "x 03";
-    public static string coinsCollected = "x 00";
-
     public Text levelNameTextField;
     public Text topBarLevelNameTextField;
     public Text scoreTextField;
     public Text livesLeftTextField;
     public Text coinsCollectedTextField;
+
+    //These are to set up loading the first level
+    public static string nextLevelScene = "World1-1";
+    public static string levelName = "World 1-1";
+    public static string topBarLevelName = "1-1";
+    public static string score = "000000";
+    public static string livesLeft = "x 03";
+    public static string coinsCollected = "x 00";
 
     IEnumerator Start () {
         levelNameTextField.text = levelName;
