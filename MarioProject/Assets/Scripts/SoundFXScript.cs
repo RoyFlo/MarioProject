@@ -7,9 +7,9 @@ public class SoundFXScript : MonoBehaviour {
     public AudioSource jumpSource;
     public AudioSource destroyBrickSource;
     public AudioSource coinSource;
-
-    void Update () {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+	
+	void Update () {
+		if(Input.GetKeyDown(KeyCode.Space)) {
             jumpSource.Play();
         }
 	}

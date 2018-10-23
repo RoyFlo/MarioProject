@@ -9,7 +9,6 @@ TagManager:
   - HitQBlock
   - QBlock
   - MovingPlatform
-  - Exit
   layers:
   - Default
   - TransparentFX
