@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1540875627312534}
+  m_RootGameObject: {fileID: 1947802815331072}
   m_IsPrefabAsset: 1
---- !u!1 &1292633985308762
+--- !u!1 &1353013598223326
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4099626402514566}
-  - component: {fileID: 70169416909804242}
+  - component: {fileID: 4932309911128912}
+  - component: {fileID: 70608709827586720}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -27,62 +27,62 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1540875627312534
+--- !u!1 &1947802815331072
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4898003975168952}
-  - component: {fileID: 212279737518590010}
-  - component: {fileID: 95094173940583408}
-  - component: {fileID: 50701273837720452}
-  - component: {fileID: 114023717918683048}
-  - component: {fileID: 58857727172703950}
-  - component: {fileID: 114421758504249662}
-  - component: {fileID: 114999471050111060}
+  - component: {fileID: 4074767675202972}
+  - component: {fileID: 212265639071482300}
+  - component: {fileID: 95446774057812000}
+  - component: {fileID: 50136498819881478}
+  - component: {fileID: 114051528691286820}
+  - component: {fileID: 58722610572731402}
+  - component: {fileID: 114432368687777740}
+  - component: {fileID: 114313828173672008}
   m_Layer: 0
-  m_Name: UpdatedPlayer
+  m_Name: Invincible small mario
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4099626402514566
+  m_IsActive: 0
+--- !u!4 &4074767675202972
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1292633985308762}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0804, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4898003975168952}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4898003975168952
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4099626402514566}
+  - {fileID: 4932309911128912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50701273837720452
+--- !u!4 &4932309911128912
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353013598223326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0804, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4074767675202972}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50136498819881478
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -96,12 +96,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58857727172703950
+--- !u!58 &58722610572731402
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 4fddddb41c1497346bb978b7998ab22c, type: 2}
@@ -111,12 +111,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!70 &70169416909804242
+--- !u!70 &70608709827586720
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1292633985308762}
+  m_GameObject: {fileID: 1353013598223326}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -126,16 +126,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0014387979, y: 0.009999999}
   m_Size: {x: 0.13418391, y: 0.019123347}
   m_Direction: 1
---- !u!95 &95094173940583408
+--- !u!95 &95446774057812000
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69b560856d8284c4bbe2db8a3ce8b58e, type: 2}
+  m_Controller: {fileID: 22100000, guid: 19a0375a8b64d79459c9494eaed30ecd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -144,12 +144,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114023717918683048
+--- !u!114 &114051528691286820
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d640b2f2e0a721942be7ff00dbff060a, type: 3}
@@ -158,12 +158,30 @@ MonoBehaviour:
   jumpSource: {fileID: 0}
   destroyBrickSource: {fileID: 0}
   coinSource: {fileID: 0}
---- !u!114 &114421758504249662
+--- !u!114 &114313828173672008
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power_type: 0
+  invincible_timer: 10
+  normal_mario: {fileID: 0}
+  big_mario: {fileID: 0}
+  fire_mario: {fileID: 0}
+  invincible_mario: {fileID: 1947802815331072}
+  invincible_big_mario: {fileID: 0}
+--- !u!114 &114432368687777740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947802815331072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ab37aca8625fd44280e9020fb6f3b61, type: 3}
@@ -172,36 +190,18 @@ MonoBehaviour:
   moveSpeed: 1.5
   jumpHeight: 4
   moveVel: 0
-  groundCheck: {fileID: 4099626402514566}
+  groundCheck: {fileID: 4932309911128912}
   groundCheckRad: 0.1
   ground:
     serializedVersion: 2
     m_Bits: 256
   grounded: 0
---- !u!114 &114999471050111060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power_type: 0
-  invincible_timer: 10
-  normal_mario: {fileID: 1540875627312534}
-  big_mario: {fileID: 0}
-  fire_mario: {fileID: 0}
-  invincible_mario: {fileID: 0}
-  invincible_big_mario: {fileID: 0}
---- !u!212 &212279737518590010
+--- !u!212 &212265639071482300
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540875627312534}
+  m_GameObject: {fileID: 1947802815331072}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -231,7 +231,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300044, guid: f93dc0ee863c78e4aa38a16f1d7d1713, type: 3}
+  m_Sprite: {fileID: 21300264, guid: f93dc0ee863c78e4aa38a16f1d7d1713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

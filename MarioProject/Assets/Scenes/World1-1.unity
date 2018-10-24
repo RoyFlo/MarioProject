@@ -996,22 +996,22 @@ Transform:
   - {fileID: 887440002}
   - {fileID: 336642845}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &84884809
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1011331834}
     m_Modifications:
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.88058877
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.43467534
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1019,15 +1019,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1035,7 +1035,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114023717918683048, guid: 57becd0f88f70454cb1158dba5b9fcbc,
         type: 2}
@@ -1052,19 +1052,39 @@ Prefab:
       propertyPath: coinSource
       value: 
       objectReference: {fileID: 1404615679}
-    - target: {fileID: 114421758504249662, guid: 57becd0f88f70454cb1158dba5b9fcbc,
+    - target: {fileID: 114999471050111060, guid: 57becd0f88f70454cb1158dba5b9fcbc,
         type: 2}
-      propertyPath: jumpHeight
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114421758504249662, guid: 57becd0f88f70454cb1158dba5b9fcbc,
+      propertyPath: big_mario
+      value: 
+      objectReference: {fileID: 1275418676}
+    - target: {fileID: 114999471050111060, guid: 57becd0f88f70454cb1158dba5b9fcbc,
         type: 2}
-      propertyPath: moveSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
+      propertyPath: fire_mario
+      value: 
+      objectReference: {fileID: 469649724}
+    - target: {fileID: 114999471050111060, guid: 57becd0f88f70454cb1158dba5b9fcbc,
+        type: 2}
+      propertyPath: invincible_mario
+      value: 
+      objectReference: {fileID: 675451033}
+    - target: {fileID: 114999471050111060, guid: 57becd0f88f70454cb1158dba5b9fcbc,
+        type: 2}
+      propertyPath: invincible_big_mario
+      value: 
+      objectReference: {fileID: 1842468577}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57becd0f88f70454cb1158dba5b9fcbc, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &84884810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4898003975168952, guid: 57becd0f88f70454cb1158dba5b9fcbc,
+    type: 2}
+  m_PrefabInternal: {fileID: 84884809}
+--- !u!1 &84884811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1540875627312534, guid: 57becd0f88f70454cb1158dba5b9fcbc,
+    type: 2}
+  m_PrefabInternal: {fileID: 84884809}
 --- !u!1 &102391773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,6 +3594,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07641792, y: 0.03350091}
   m_EdgeRadius: 0
+--- !u!1001 &469649723
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1011331834}
+    m_Modifications:
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125354626527406, guid: d5475fb8c64c7f541adaa6d3a4267010,
+        type: 2}
+      propertyPath: normal_mario
+      value: 
+      objectReference: {fileID: 84884811}
+    - target: {fileID: 114125354626527406, guid: d5475fb8c64c7f541adaa6d3a4267010,
+        type: 2}
+      propertyPath: big_mario
+      value: 
+      objectReference: {fileID: 1275418676}
+    - target: {fileID: 114125354626527406, guid: d5475fb8c64c7f541adaa6d3a4267010,
+        type: 2}
+      propertyPath: invincible_mario
+      value: 
+      objectReference: {fileID: 675451033}
+    - target: {fileID: 114125354626527406, guid: d5475fb8c64c7f541adaa6d3a4267010,
+        type: 2}
+      propertyPath: invincible_big_mario
+      value: 
+      objectReference: {fileID: 1842468577}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5475fb8c64c7f541adaa6d3a4267010, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &469649724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1447505415133920, guid: d5475fb8c64c7f541adaa6d3a4267010,
+    type: 2}
+  m_PrefabInternal: {fileID: 469649723}
+--- !u!4 &469649725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4125357630785360, guid: d5475fb8c64c7f541adaa6d3a4267010,
+    type: 2}
+  m_PrefabInternal: {fileID: 469649723}
 --- !u!1 &479991567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5644,6 +5736,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15109408, y: 0.012508646}
   m_EdgeRadius: 0
+--- !u!1001 &675451032
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1011331834}
+    m_Modifications:
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313828173672008, guid: 7642a05d12c898f47a915e459b44694f,
+        type: 2}
+      propertyPath: normal_mario
+      value: 
+      objectReference: {fileID: 84884811}
+    - target: {fileID: 114313828173672008, guid: 7642a05d12c898f47a915e459b44694f,
+        type: 2}
+      propertyPath: big_mario
+      value: 
+      objectReference: {fileID: 1275418676}
+    - target: {fileID: 114313828173672008, guid: 7642a05d12c898f47a915e459b44694f,
+        type: 2}
+      propertyPath: fire_mario
+      value: 
+      objectReference: {fileID: 469649724}
+    - target: {fileID: 114313828173672008, guid: 7642a05d12c898f47a915e459b44694f,
+        type: 2}
+      propertyPath: invincible_big_mario
+      value: 
+      objectReference: {fileID: 1842468577}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7642a05d12c898f47a915e459b44694f, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &675451033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1947802815331072, guid: 7642a05d12c898f47a915e459b44694f,
+    type: 2}
+  m_PrefabInternal: {fileID: 675451032}
+--- !u!4 &675451034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4074767675202972, guid: 7642a05d12c898f47a915e459b44694f,
+    type: 2}
+  m_PrefabInternal: {fileID: 675451032}
 --- !u!1 &681225957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6024,7 +6188,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &703063673
 BoxCollider2D:
@@ -7509,6 +7673,39 @@ Transform:
   - {fileID: 110773121}
   m_Father: {fileID: 1345951814}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1011331833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011331834}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1011331834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011331833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.88058877, y: -0.43467534, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 84884810}
+  - {fileID: 1275418677}
+  - {fileID: 469649725}
+  - {fileID: 675451034}
+  - {fileID: 1842468576}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051129277
 GameObject:
@@ -9057,6 +9254,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14001274, y: 0.0035668612}
   m_EdgeRadius: 0
+--- !u!1001 &1275418675
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1011331834}
+    m_Modifications:
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064559949015184, guid: 2d32f9e47178b2c419f49420176743e9,
+        type: 2}
+      propertyPath: normal_mario
+      value: 
+      objectReference: {fileID: 84884811}
+    - target: {fileID: 114064559949015184, guid: 2d32f9e47178b2c419f49420176743e9,
+        type: 2}
+      propertyPath: fire_mario
+      value: 
+      objectReference: {fileID: 469649724}
+    - target: {fileID: 114064559949015184, guid: 2d32f9e47178b2c419f49420176743e9,
+        type: 2}
+      propertyPath: invincible_mario
+      value: 
+      objectReference: {fileID: 675451033}
+    - target: {fileID: 114064559949015184, guid: 2d32f9e47178b2c419f49420176743e9,
+        type: 2}
+      propertyPath: invincible_big_mario
+      value: 
+      objectReference: {fileID: 1842468577}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d32f9e47178b2c419f49420176743e9, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1275418676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1899417914373640, guid: 2d32f9e47178b2c419f49420176743e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1275418675}
+--- !u!4 &1275418677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4728497591772338, guid: 2d32f9e47178b2c419f49420176743e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1275418675}
 --- !u!1 &1278488619
 GameObject:
   m_ObjectHideFlags: 0
@@ -9402,7 +9671,7 @@ Transform:
   - {fileID: 810809432}
   - {fileID: 109076116}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347859182
 GameObject:
@@ -9487,7 +9756,7 @@ Transform:
   - {fileID: 1824593982}
   - {fileID: 1404615678}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362808973
 GameObject:
@@ -9969,7 +10238,7 @@ Transform:
   - {fileID: 652820842}
   - {fileID: 1145088133}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1420954656
 GameObject:
@@ -10851,7 +11120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606075157
 GameObject:
@@ -12387,7 +12656,7 @@ Transform:
   - {fileID: 566302155}
   - {fileID: 375572310}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788155644
 GameObject:
@@ -12723,6 +12992,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.64}
   m_EdgeRadius: 0
+--- !u!1001 &1842468575
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1011331834}
+    m_Modifications:
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114823426327830846, guid: 6bc322bfc0d8a244fb6c90d963400419,
+        type: 2}
+      propertyPath: normal_mario
+      value: 
+      objectReference: {fileID: 84884811}
+    - target: {fileID: 114823426327830846, guid: 6bc322bfc0d8a244fb6c90d963400419,
+        type: 2}
+      propertyPath: big_mario
+      value: 
+      objectReference: {fileID: 1275418676}
+    - target: {fileID: 114823426327830846, guid: 6bc322bfc0d8a244fb6c90d963400419,
+        type: 2}
+      propertyPath: fire_mario
+      value: 
+      objectReference: {fileID: 469649724}
+    - target: {fileID: 114823426327830846, guid: 6bc322bfc0d8a244fb6c90d963400419,
+        type: 2}
+      propertyPath: invincible_mario
+      value: 
+      objectReference: {fileID: 675451033}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc322bfc0d8a244fb6c90d963400419, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1842468576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4859428843493620, guid: 6bc322bfc0d8a244fb6c90d963400419,
+    type: 2}
+  m_PrefabInternal: {fileID: 1842468575}
+--- !u!1 &1842468577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1681584854039634, guid: 6bc322bfc0d8a244fb6c90d963400419,
+    type: 2}
+  m_PrefabInternal: {fileID: 1842468575}
 --- !u!1 &1844045520
 GameObject:
   m_ObjectHideFlags: 0
