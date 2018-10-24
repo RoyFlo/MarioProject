@@ -16,21 +16,23 @@ public class LoadLevelScript : MonoBehaviour {
     public static string nextLevelScene = "World1-1";
     public static string levelName = "World 1-1";
     public static string topBarLevelName = "1-1";
-    public static string score = "000000";
     public static string livesLeft = "x 03";
-    public static string coinsCollected = "x 00";
 
     IEnumerator Start () {
         levelNameTextField.text = levelName;
         topBarLevelNameTextField.text = topBarLevelName;
-        scoreTextField.text = score;
+        scoreTextField.text = addToStartOfString(ScoreKeeper.score.ToString(), 6);
         livesLeftTextField.text = livesLeft;
-        coinsCollectedTextField.text = coinsCollected;
+        coinsCollectedTextField.text = "x" + addToStartOfString(ScoreKeeper.coins.ToString(), 2);
         yield return StartCoroutine("LoadNextLevel");
 	}
 
     IEnumerator LoadNextLevel() {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(nextLevelScene);
+    }
+
+    private string addToStartOfString(string s, int digitCount) {
+        return s.PadLeft(digitCount, '0');
     }
 }

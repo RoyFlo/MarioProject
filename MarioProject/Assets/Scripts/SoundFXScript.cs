@@ -18,11 +18,14 @@ public class SoundFXScript : MonoBehaviour {
         if (trig.gameObject.tag == "DestroyBrick") {
             destroyBrickSource.Play();
             Destroy(trig.gameObject.transform.parent.gameObject);
+            ScoreKeeper.addPoints(100);
         }
 
         if (trig.gameObject.tag == "HitQBlock") {
             coinSource.Play();
             trig.gameObject.tag = "QBlock";
+            ScoreKeeper.addPoints(100);
+            ScoreKeeper.addCoins(1);
         }
     }
 }
