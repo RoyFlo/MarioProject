@@ -5,7 +5,7 @@ AnimatorOverrideController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: small Mario invincible
+  m_Name: Invincible small Mario
   m_Controller: {fileID: 9100000, guid: 69b560856d8284c4bbe2db8a3ce8b58e, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 6f58ac576d1125f448ff7df3590a8aae, type: 2}
