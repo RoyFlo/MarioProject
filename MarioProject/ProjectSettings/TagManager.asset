@@ -11,6 +11,7 @@ TagManager:
   - MovingPlatform
   - Power Up
   - Enemy
+  - Pipe
   layers:
   - Default
   - TransparentFX
@@ -47,6 +48,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3171597277
+    locked: 0
+  - name: PowerUp
+    uniqueID: 1145893133
     locked: 0
   - name: Blocks
     uniqueID: 3012091527
