@@ -37,14 +37,14 @@ public class PlayerMove2 : MonoBehaviour {
             m_RigidBody.velocity = new Vector2(m_RigidBody.velocity.x, jumpHeight);
         }
         moveVel = 0f;
-        //move Right
+        //move Right with D or right arrow key
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             //m_RigidBody.velocity = new Vector2(moveSpeed, m_RigidBody.velocity.y);
             moveVel = moveSpeed;
         }
 
-        //move Left
+        //move Left with A or left arrow key
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             //m_RigidBody.velocity = new Vector2(-moveSpeed, m_RigidBody.velocity.y);

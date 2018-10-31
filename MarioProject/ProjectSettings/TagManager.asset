@@ -9,7 +9,8 @@ TagManager:
   - HitQBlock
   - QBlock
   - MovingPlatform
-  - Exit
+  - Power Up
+  - Enemy
   layers:
   - Default
   - TransparentFX
