@@ -366,6 +366,16 @@ Prefab:
       propertyPath: m_Name
       value: GroundSlab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 61294729810513770, guid: 4308d39a4702b45428b508a5d91d6eb0,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.07345438
+      objectReference: {fileID: 0}
+    - target: {fileID: 61294729810513770, guid: 4308d39a4702b45428b508a5d91d6eb0,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.07206249
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4308d39a4702b45428b508a5d91d6eb0, type: 2}
   m_IsPrefabAsset: 0
