@@ -20,7 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4360149827984332}
   - component: {fileID: 212259425776626378}
+<<<<<<< HEAD
   - component: {fileID: 61483381573705122}
+=======
+>>>>>>> master
   - component: {fileID: 61499252302760168}
   m_Layer: 0
   m_Name: GroundSlab
@@ -97,6 +100,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 0.0141272545}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!61 &61483381573705122
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -122,6 +126,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 0.0141272545}
   m_EdgeRadius: 0
+=======
+>>>>>>> master
 --- !u!61 &61499252302760168
 BoxCollider2D:
   m_ObjectHideFlags: 1
