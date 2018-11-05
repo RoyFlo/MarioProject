@@ -25,6 +25,6 @@ public class LevelManager : MonoBehaviour {
         LoadLevelScript.topBarLevelName = topBarNextLevelName;
         LoadLevelScript.livesLeft = livesLeft;
 
-        SceneManager.LoadScene("LevelLoadScene");
+        SceneManager.LoadScene("LoadLevelScene");
     }
 }

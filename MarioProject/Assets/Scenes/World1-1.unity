@@ -7070,7 +7070,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &943524517
 GameObject:
@@ -7430,7 +7430,7 @@ RectTransform:
   m_Children:
   - {fileID: 1992207930}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9687,6 +9687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355463300}
   - component: {fileID: 1355463301}
+  - component: {fileID: 1355463302}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -9726,6 +9727,19 @@ MonoBehaviour:
   jumpSource: {fileID: 238346577}
   destroyBrickSource: {fileID: 1824593983}
   coinSource: {fileID: 1404615679}
+--- !u!114 &1355463302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355463299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c12cbe624b038f4797a8d9117cdbef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 2094348831}
+  exitSceneMusic: {fileID: 1409595671}
 --- !u!1 &1362808973
 GameObject:
   m_ObjectHideFlags: 0
@@ -10179,7 +10193,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8cf75eec9a1fc5d43a1f86a3b0db26ca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 89be5ce3dca872f4da54bcbbf668ac5c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10724,48 +10738,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4215581558734620, guid: 01a626f5eebab6a4caf9850fd2d860ed,
     type: 2}
   m_PrefabInternal: {fileID: 1091998164}
---- !u!1 &1466523240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1466523243}
-  - component: {fileID: 1466523242}
-  m_Layer: 0
-  m_Name: BGMusic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1466523242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1466523240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c12cbe624b038f4797a8d9117cdbef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgMusicSource: {fileID: 2094348831}
-  exitSceneMusicSource: {fileID: 1409595671}
---- !u!4 &1466523243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1466523240}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7308455, y: 1.1772963, z: 0.13884456}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1477340683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4570318514567240, guid: cc0dc9831b7a0d5409e850cd65c5de41,
