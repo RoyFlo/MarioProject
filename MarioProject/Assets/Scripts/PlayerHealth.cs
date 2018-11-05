@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerHealth : MonoBehaviour {
+
+    public AudioSource DeadPlumberJumping;
 
     public bool hasDied;
     
@@ -19,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
 	// Update is called once per frame
     // I can add in some stuff about the player health but I think jacky said he already had something with it
 	void Update () {
-        if (gameObject.transform.position.y < -1.7) {
+        if (gameObject.transform.position.y < -1.7) { 
             Debug.Log("Player has died");
             hasDied = true;
         }
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour {
         // Reloads the level after the Die subroutine is called, Mario will automatically spawn in after 1 second
         // In future maybe load in a check for lives and other shit 
         yield return new WaitForSeconds(1);
+        DeadPlumberJumping.Play();
         SceneManager.LoadScene("World1-1");
         yield return null;
         /* 
