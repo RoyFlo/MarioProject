@@ -40,8 +40,6 @@ public class CursorScript : MonoBehaviour {
                 ScoreKeeper.resetScore();
                 ScoreKeeper.resetCoins();
                 SceneManager.LoadScene(nextSceneLoad);
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-
             }
 
             if(activeCursor == exitCursor) {

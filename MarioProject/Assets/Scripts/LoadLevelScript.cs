@@ -22,7 +22,7 @@ public class LoadLevelScript : MonoBehaviour {
         levelNameTextField.text = levelName;
         topBarLevelNameTextField.text = topBarLevelName;
         scoreTextField.text = addToStartOfString(ScoreKeeper.score.ToString(), 6);
-        livesLeftTextField.text = livesLeft;
+        livesLeftTextField.text = "x " + addToStartOfString(ScoreKeeper.livesLeft.ToString(), 2);
         coinsCollectedTextField.text = "x" + addToStartOfString(ScoreKeeper.coins.ToString(), 2);
         yield return StartCoroutine("LoadNextLevel");
 	}

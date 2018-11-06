@@ -38,6 +38,12 @@ public class PlayerHealth : MonoBehaviour {
         // Reloads the level after the Die subroutine is called, Mario will automatically spawn in after 1 second
         // In future maybe load in a check for lives and other shit 
         yield return new WaitForSeconds(1);
+
+        ScoreKeeper.removeLife();
+        if (ScoreKeeper.livesLeft == 0) {
+            // Reload game or whatever
+        }
+
         SceneManager.LoadScene("World1-1");
         yield return null;
         /* 

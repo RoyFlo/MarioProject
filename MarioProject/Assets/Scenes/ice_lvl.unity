@@ -675,6 +675,7 @@ MonoBehaviour:
   worldTextField: {fileID: 1715364814}
   scoreTextField: {fileID: 2091482516}
   coinsCollectedTextField: {fileID: 166746969}
+  timeLeftTextField: {fileID: 194514659}
 --- !u!114 &309399428
 MonoBehaviour:
   m_ObjectHideFlags: 0
