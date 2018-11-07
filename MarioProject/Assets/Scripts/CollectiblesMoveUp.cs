@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CollectiblesMoveUp : MonoBehaviour {
     private Vector3 newPosition;
+    public float speed;
     private void Start()
     {
         newPosition = new Vector3(transform.position.x, transform.position.y + 0.164f, 0);
     }
     void Update () {
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, 0.08f * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
         if(transform.position == newPosition)
         {
             if (gameObject.name.Contains("Mushroom"))
@@ -28,7 +29,6 @@ public class CollectiblesMoveUp : MonoBehaviour {
             {
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
             }
-            //           gameObject.transform.SetParent(null);
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
             gameObject.GetComponent<CollectiblesMoveUp>().enabled = false;
         }
