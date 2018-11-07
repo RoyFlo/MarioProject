@@ -13593,11 +13593,14 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 50319908739274532, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 4fddddb41c1497346bb978b7998ab22c, type: 2}
+=======
+>>>>>>> master
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f22fc485b5ff894992f62a8b309bd43, type: 2}
   m_IsPrefabAsset: 0
