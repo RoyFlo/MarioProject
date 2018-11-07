@@ -14,7 +14,7 @@ public class QBlock : MonoBehaviour {
             temp.transform.SetParent(null);
             temp.SetActive(true);
 
-            if (gameObject.transform.parent.Find("Star") != null)
+            if (gameObject.transform.parent.Find("Star") != null) 
             {
                 temp = gameObject.transform.parent.Find("Star").gameObject;
             }
