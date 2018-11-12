@@ -268,7 +268,7 @@ MonoBehaviour:
   groundCheckRad: 0.1
   ground:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   grounded: 0
 --- !u!114 &114794452023490776
 MonoBehaviour:
