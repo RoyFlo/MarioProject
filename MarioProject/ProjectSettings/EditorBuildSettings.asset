@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lvl2.unity
     guid: bbe1a7f55c0932c4a9bae6a850955b37
   - enabled: 1
+    path: Assets/Scenes/Bonus2.unity
+    guid: e6a276933f5262445be68c96292210b6
+  - enabled: 1
     path: Assets/Scenes/ice_lvl.unity
     guid: 8f6f13d20edef99488719294c4fbba1b
   - enabled: 1
