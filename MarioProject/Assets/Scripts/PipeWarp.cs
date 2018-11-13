@@ -6,11 +6,14 @@ using UnityEngine;
 public class PipeWarp : MonoBehaviour {
 
     public int load;
+    public GameObject player;
+    public GameObject WarpZone;
 
 
 	// Use this for initialization
 	void Start ()
     {
+        
 
     }
 	
@@ -23,6 +26,14 @@ public class PipeWarp : MonoBehaviour {
                 Application.LoadLevel(load);
             }
         }
+    }
+
+    void OnLevelWasLoaded()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        WarpZone = GameObject.FindGameObjectWithTag("Warp");
+
+        player.transform.position = WarpZone.transform.position;
     }
 
 	// Update is called once per frame
