@@ -1,17 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreKeeper : MonoBehaviour {
 
     public static int score = 0;
     public static int coins = 0;
     public static int livesLeft = 3;
-    public static int timeLeft = 999;
+    public static int timeLeft;
     public static bool isFinished;
+
+    private static int previousTime;
 
     void Start() {
         isFinished = false;
+
+        if (SceneManager.GetActiveScene().buildIndex == 2 ||
+            SceneManager.GetActiveScene().buildIndex == 4 ||
+            SceneManager.GetActiveScene().buildIndex == 7) {
+            Debug.Log("bonus level reached");
+            timeLeft = previousTime;
+        } else {
+            timeLeft = 999;
+        }
+    }
+
+    void OnDisable() {
+        previousTime = timeLeft;
     }
 
     public static void addPoints(int points) {
@@ -35,6 +51,14 @@ public class ScoreKeeper : MonoBehaviour {
             livesLeft += newLives;
         } else {
             livesLeft = 99;
+        }
+    }
+
+    public static void removeCoins(int coinsSpent) {
+        if (coins - coinsSpent <= 0) {
+            coins = 0;
+        } else {
+            coins -= coinsSpent;
         }
     }
 

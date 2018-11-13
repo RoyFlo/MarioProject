@@ -5,44 +5,42 @@ using UnityEngine.SceneManagement;
 
 public class CursorScript : MonoBehaviour {
 
-    public GameObject startCursor;
-    public GameObject exitCursor;
+    public GameObject topCursor;
+    public GameObject bottomCursor;
     public AudioSource soundSource;
     public string nextSceneLoad;
 
     private GameObject activeCursor;
 
     void Start() {
-        activeCursor = startCursor;
+        activeCursor = topCursor;
     }
 
     void Update () {
-        if((Input.GetKeyDown("down") || Input.GetKeyDown("s")) && activeCursor == startCursor) {
+        if((Input.GetKeyDown("down") || Input.GetKeyDown("s")) && activeCursor == topCursor) {
             soundSource.Play();
 
-            exitCursor.SetActive(true);
-            activeCursor = exitCursor;
+            bottomCursor.SetActive(true);
+            activeCursor = bottomCursor;
 
-            startCursor.SetActive(false);
+            topCursor.SetActive(false);
         }
 
-        if ((Input.GetKeyDown("up") || Input.GetKeyDown("w")) && activeCursor == exitCursor) {
+        if ((Input.GetKeyDown("up") || Input.GetKeyDown("w")) && activeCursor == bottomCursor) {
             soundSource.Play();
 
-            startCursor.SetActive(true);
-            activeCursor = startCursor;
+            topCursor.SetActive(true);
+            activeCursor = topCursor;
 
-            exitCursor.SetActive(false);
+            bottomCursor.SetActive(false);
         }
 
         if(Input.GetKeyDown("space")) {
-            if (activeCursor == startCursor) {
-                ScoreKeeper.resetScore();
-                ScoreKeeper.resetCoins();
+            if (activeCursor == topCursor) {
                 SceneManager.LoadScene(nextSceneLoad);
             }
 
-            if(activeCursor == exitCursor) {
+            if(activeCursor == bottomCursor) {
                 Debug.Log("Exiting game...");
                 Application.Quit();
             }

@@ -10,6 +10,8 @@ public class UIScript : MonoBehaviour {
     public Text coinsCollectedTextField;
     public Text timeLeftTextField;
 
+    private bool isPaused;
+
     BGMusicScript bgMusic;
 
     void Start() {
@@ -17,13 +19,14 @@ public class UIScript : MonoBehaviour {
         ScoreKeeper.timeLeft = 999;
         ScoreKeeper.isFinished = false;
         StartCoroutine("LoseTime");
+        isPaused = false;
     }
     
     IEnumerator LoseTime() {
-        while (true) {
+        while (!isPaused) {
             yield return new WaitForSeconds(0.5f);
             ScoreKeeper.timeLeft--;
-            if (ScoreKeeper.timeLeft == 990) {
+            if (ScoreKeeper.timeLeft == 150) {
                 bgMusic.LowTime();
             }
 
@@ -35,6 +38,10 @@ public class UIScript : MonoBehaviour {
             if(ScoreKeeper.isFinished) {
                 yield break;
             }
+        }
+
+        while (isPaused) {
+            yield return null;
         }
     }
 

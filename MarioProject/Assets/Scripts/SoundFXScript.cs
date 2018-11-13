@@ -1,73 +1,78 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum SoundFX {
-    JUMP,
-    BRICK_BREAK,
-    COLLECT_COIN,
-    COLLECT_MUSHROOM,
-    COLLECT_STAR,
-    COLLECT_1UP
-}
+using UnityEngine.SceneManagement;
 
 public class SoundFXScript : MonoBehaviour {
 
     public AudioSource jumpSource;
     public AudioSource destroyBrickSource;
     public AudioSource coinSource;
+    public AudioSource itemSource;
+    public AudioSource growSource;
+    public AudioSource warpSource;
 
-    PlayerMove2 playerMove;
+    private CircleCollider2D warpPipe;
 
-    /*
-     * Needed sound effects:
-     * Big mushroom
-     * Star
-     * 1-up
-     */
+    BGMusicScript bgMusic;
 
-   void Start() {
+    public static bool grounded;
 
+    void Start() {
+        bgMusic = FindObjectOfType<BGMusicScript>();
+        if (GameObject.Find("warpPipe").GetComponent<CircleCollider2D>() == null) {
+            warpPipe = new CircleCollider2D();
+            Debug.Log("No warp pipe");
+        } else {
+            warpPipe = GameObject.Find("warpPipe").GetComponent<CircleCollider2D>();
+        }
     }
 
-	
-	void Update () {
-
-		if(Input.GetKeyDown(KeyCode.Space)) {
+    void Update() {
+        if (grounded && Input.GetKeyDown(KeyCode.Space)) {
             jumpSource.Play();
         }
 	}
 
-    public void playFX(SoundFX soundFX) {
-        switch (soundFX) {
-            case SoundFX.JUMP:
-                jumpSource.Play();
-                break;
-            case SoundFX.BRICK_BREAK:
-                destroyBrickSource.Play();
-                break;
-            case SoundFX.COLLECT_COIN:
-                coinSource.Play();
-                break;
-            case SoundFX.COLLECT_MUSHROOM:
-            case SoundFX.COLLECT_STAR:
-            case SoundFX.COLLECT_1UP:
-                break;
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D trig) {
         if (trig.gameObject.tag == "DestroyBrick") {
+            ScoreKeeper.addPoints(100);
             destroyBrickSource.Play();
             Destroy(trig.gameObject.transform.parent.gameObject);
-            ScoreKeeper.addPoints(100);
         }
 
         if (trig.gameObject.tag == "HitQBlock") {
+            ScoreKeeper.addPoints(500);
+            ScoreKeeper.addCoins(1);
             coinSource.Play();
             trig.gameObject.tag = "QBlock";
-            ScoreKeeper.addPoints(100);
+        }
+
+        if(trig.gameObject.tag == "Power Up") {
+            ScoreKeeper.addPoints(500);
             ScoreKeeper.addCoins(1);
+            coinSource.Play();
+        }
+
+        if (trig.gameObject.tag == "HitItemBlock") {
+            ScoreKeeper.addPoints(100);
+            itemSource.Play();
+            trig.gameObject.tag = "QBlock";
+        }
+
+        if (trig.gameObject.name.Contains("Star")) {
+            bgMusic.playStarMusic();
+        }
+
+        if (trig.gameObject.name.Contains("Red Mushroom")) {
+            growSource.Play();
+        }        
+    }
+
+    IEnumerator OnTriggerStay2D(Collider2D trig) {
+        if (trig.GetComponent<CircleCollider2D>() == warpPipe && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))) {
+            warpSource.Play();
+            yield return new WaitForSeconds(1.5f);
         }
     }
 }

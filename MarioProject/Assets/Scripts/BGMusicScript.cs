@@ -7,6 +7,11 @@ public class BGMusicScript : MonoBehaviour {
     public AudioSource bgMusicSource;
     public AudioSource lowTimeWarning;
     public AudioSource exitSceneMusic;
+    public AudioSource starSource;
+
+    void Start() {
+        bgMusicSource.volume = 0.5f;
+    }
 
     void Awake() {
         bgMusicSource.Play();
@@ -23,5 +28,12 @@ public class BGMusicScript : MonoBehaviour {
         lowTimeWarning.Play();
         bgMusicSource.pitch = 1.25f;
         bgMusicSource.PlayDelayed(3);
+    }
+
+    public IEnumerator playStarMusic() {
+        bgMusicSource.Pause();
+        starSource.Play();
+        yield return new WaitForSeconds(10);
+        bgMusicSource.Play();
     }
 }
