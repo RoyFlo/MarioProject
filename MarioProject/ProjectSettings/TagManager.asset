@@ -12,6 +12,7 @@ TagManager:
   - Power Up
   - Enemy
   - Pipe
+  - Warp
   layers:
   - Default
   - TransparentFX
