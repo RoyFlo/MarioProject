@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollectiblesMoveUp : MonoBehaviour {
     private Vector3 newPosition;
+    public float move_speed = 0.08f;
     private void Start()
     {
         newPosition = new Vector3(transform.position.x, transform.position.y + 0.164f, 0);
