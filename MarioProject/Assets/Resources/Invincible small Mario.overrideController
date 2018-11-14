@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Invincible small Mario
+  m_Controller: {fileID: 9100000, guid: 69b560856d8284c4bbe2db8a3ce8b58e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6f58ac576d1125f448ff7df3590a8aae, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 924e306705b36744ab51cca267f36888, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 87ff6f4494b15704d99085c744911e34, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7b3ccd686a7dcf34cbfdc9f2dadbb3a4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: eac273917f854b841a1b3ef316bc2d93, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 09262db6296e85c489834e02819b678e, type: 2}

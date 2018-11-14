@@ -8,6 +8,11 @@ TagManager:
   - DestroyBrick
   - HitQBlock
   - QBlock
+  - MovingPlatform
+  - Power Up
+  - Enemy
+  - Pipe
+  - Warp
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,11 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Enemy
+=======
+  - Ground
+>>>>>>> master
   - 
   - 
   - 
@@ -44,6 +53,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3171597277
+    locked: 0
+  - name: PowerUp
+    uniqueID: 1145893133
     locked: 0
   - name: Blocks
     uniqueID: 3012091527
