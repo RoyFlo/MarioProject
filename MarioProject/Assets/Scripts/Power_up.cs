@@ -5,7 +5,7 @@ using UnityEngine;
 public class Power_up : MonoBehaviour {
 
     public int power_type;
-    private bool isInvincible;
+    public bool isInvincible;
     public float invincible_timer;
 
     public GameObject normal_mario;
@@ -20,14 +20,13 @@ public class Power_up : MonoBehaviour {
         if(isInvincible == true)
         {
             invincible_timer -= Time.deltaTime;
-
         }
         // when invincible time out, we return to normal, and reset the invincible timer.
         if(invincible_timer < 0.0f)
         {
             isInvincible = false;
             RevertBackToNormalFromInvincible();
-            invincible_timer = 10;
+            invincible_timer = 12;
         }
     }
 
@@ -49,7 +48,6 @@ public class Power_up : MonoBehaviour {
             // if we pick up a star, then we become invincible
             if(col.gameObject.name.Contains("Star"))
             {
-                isInvincible = true;
                 becomeInvincible();
             }
             //destroy the collectible, then get our power
@@ -77,6 +75,7 @@ public class Power_up : MonoBehaviour {
     private void RevertBackToNormalFromInvincible()
     {
         GameObject oldMario = null;
+        Debug.Log("we were: " + power_type);
         switch (power_type)
         {
             case 0: oldMario = normal_mario; break;

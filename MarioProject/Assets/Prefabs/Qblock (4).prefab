@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   star_move_direction: 1
-  star_move_speed: 1
+  star_move_speed: 0.3
 --- !u!114 &114298640090901140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4beb2a92615d06744934ca6c7b9973b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move_speed: 0.1
 --- !u!114 &114592907854762844
 MonoBehaviour:
   m_ObjectHideFlags: 1
