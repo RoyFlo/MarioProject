@@ -14,7 +14,6 @@ public class PipeWarp : MonoBehaviour {
 	void Start ()
     {
         
-
     }
 	
     void OnTriggerStay2D(Collider2D col)
