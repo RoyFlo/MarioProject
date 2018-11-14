@@ -69,6 +69,7 @@ public class PlayerMove2 : MonoBehaviour {
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRad, ground);
+        SoundFXScript.isGrounded = grounded;
     }
 
     void OnCollisionEnter2D(Collision2D other)

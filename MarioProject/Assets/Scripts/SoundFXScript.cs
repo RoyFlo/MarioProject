@@ -7,21 +7,32 @@ public class SoundFXScript : MonoBehaviour {
     public AudioSource jumpSource;
     public AudioSource destroyBrickSource;
     public AudioSource coinSource;
-	
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space)) {
+    public AudioSource itemSource;
+
+    public static bool isGrounded;
+
+    void Update () {
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
             jumpSource.Play();
         }
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D trig) {
         if (trig.gameObject.tag == "DestroyBrick") {
             destroyBrickSource.Play();
             Destroy(trig.gameObject.transform.parent.gameObject);
+            ScoreKeeper.addPoints(100);
         }
 
         if (trig.gameObject.tag == "HitQBlock") {
             coinSource.Play();
+            trig.gameObject.tag = "QBlock";
+            ScoreKeeper.addPoints(100);
+            ScoreKeeper.addCoins(1);
+        }
+
+        if (trig.gameObject.tag == "HitItemBlock") {
+            itemSource.Play();
             trig.gameObject.tag = "QBlock";
         }
     }
