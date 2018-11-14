@@ -11,7 +11,6 @@ public class LevelManager : MonoBehaviour {
     public string nextLevelName;
     public string topBarNextLevelName;
     public string livesLeft;
-    public GameObject player;
 
     private BoxCollider2D exitCollider;
 
@@ -21,22 +20,6 @@ public class LevelManager : MonoBehaviour {
         bgMusic = FindObjectOfType<BGMusicScript>();
         exitCollider = GameObject.Find("Exit").GetComponent<BoxCollider2D>();
         previousLevel = 0;
-    }
-
-    void OnEnable() {
-        switch (previousLevel) {
-            case 2:
-                player.transform.position = new Vector3(24.76f, -0.45f, 0.0f);
-                break;
-            case 4:
-                player.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
-                break;
-            case 7:
-                player.transform.position = new Vector3(20.07f, 7.31f, 0.0f);
-                break;
-            default:
-                break;
-        }
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D collider) {
@@ -55,11 +38,5 @@ public class LevelManager : MonoBehaviour {
         LoadLevelScript.livesLeft = livesLeft;
 
         SceneManager.LoadScene("LoadLevelScene");
-    }
-
-    void OnTriggerStay2D(Collider2D trig) {
-        if (trig.gameObject.tag == "Player" && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))) {
-            previousLevel = SceneManager.GetActiveScene().buildIndex;
-        }
     }
 }
