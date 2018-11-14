@@ -5,13 +5,35 @@ using UnityEngine;
 public class BGMusicScript : MonoBehaviour {
 
     public AudioSource bgMusicSource;
-    private bool audioBegin = false;
+    public AudioSource lowTimeWarning;
+    public AudioSource exitSceneMusic;
+    public AudioSource starSource;
+
+    void Start() {
+        bgMusicSource.volume = 0.5f;
+    }
 
     void Awake() {
-        if(!audioBegin) {
-            bgMusicSource.Play();
-            DontDestroyOnLoad(gameObject);
-            audioBegin = true;
-        }
+        bgMusicSource.Play();
+    }
+
+    public void ExitScene() {
+        ScoreKeeper.isFinished = true;
+        bgMusicSource.Stop();
+        exitSceneMusic.Play();
+    }
+
+    public void LowTime() {
+        bgMusicSource.Stop();
+        lowTimeWarning.Play();
+        bgMusicSource.pitch = 1.25f;
+        bgMusicSource.PlayDelayed(3);
+    }
+
+    public IEnumerator playStarMusic() {
+        bgMusicSource.Pause();
+        starSource.Play();
+        yield return new WaitForSeconds(10);
+        bgMusicSource.Play();
     }
 }
