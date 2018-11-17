@@ -11561,6 +11561,8 @@ MonoBehaviour:
   coinSource: {fileID: 1404615679}
   itemSource: {fileID: 437269047}
   growSource: {fileID: 1958408395}
+=======
+  itemSource: {fileID: 0}
 --- !u!1 &1362808973
 GameObject:
   m_ObjectHideFlags: 0
