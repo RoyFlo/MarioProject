@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Pipe
   - Warp
+  - HitItemBlock
   layers:
   - Default
   - TransparentFX
@@ -61,4 +62,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1257024133
+    locked: 0
+  - name: UI
+    uniqueID: 3206041977
     locked: 0
