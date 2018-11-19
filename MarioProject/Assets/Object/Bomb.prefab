@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 61362332490311586}
   - component: {fileID: 114193548211809700}
   - component: {fileID: 50463599020471884}
+  - component: {fileID: 70182821007322826}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,6 +89,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.16}
   m_EdgeRadius: 0
+--- !u!70 &70182821007322826
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1624166955124154}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.14, y: 0.16}
+  m_Direction: 0
 --- !u!114 &114193548211809700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,6 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BombSpeed: 1
+  BombLife: 1
+  explos: {fileID: 1484890785642566, guid: 20b1856d6949f744e81c9965bdb5e688, type: 2}
 --- !u!212 &212411326156946426
 SpriteRenderer:
   m_ObjectHideFlags: 1
