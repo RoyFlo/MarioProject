@@ -8,17 +8,8 @@ public class SoundFXScript : MonoBehaviour {
     public AudioSource destroyBrickSource;
     public AudioSource coinSource;
     public AudioSource itemSource;
-    public AudioSource growSource;
 
     public static bool isGrounded;
-
-    BGMusicScript bgMusic;
-
-    void Start () {
-        itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
-        growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
-        bgMusic = FindObjectOfType<BGMusicScript>();
-    }
 
     void Update () {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
@@ -43,15 +34,6 @@ public class SoundFXScript : MonoBehaviour {
         if (trig.gameObject.tag == "HitItemBlock") {
             itemSource.Play();
             trig.gameObject.tag = "QBlock";
-        }
-
-        if (trig.gameObject.name.Contains("Red Mushroom") || trig.gameObject.name.Contains("Flower")) {
-            growSource.Play();
-            ScoreKeeper.addPoints(100);
-        }
-
-        if(trig.gameObject.name.Contains("Star")) {
-            bgMusic.playStarMusic();
         }
     }
 }

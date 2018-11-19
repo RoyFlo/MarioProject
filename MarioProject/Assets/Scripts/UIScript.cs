@@ -52,16 +52,6 @@ public class UIScript : MonoBehaviour {
         timeLeftTextField.text = addToStartOfString(ScoreKeeper.timeLeft.ToString(), 3);
 	}
 
-    // Attempt to show score on screen when collecting coins/items
-    // Currently not working
-    /*
-    public IEnumerator ShowScore(int score) {
-        earnedPointsTextField.text = "+" + score.ToString();
-        yield return new WaitForSeconds(2);
-        earnedPointsTextField.text = "";
-    }
-    */
-
     private string addToStartOfString(string s, int digitCount) {
         return s.PadLeft(digitCount, '0');
     }

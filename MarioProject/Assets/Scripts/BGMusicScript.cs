@@ -34,7 +34,6 @@ public class BGMusicScript : MonoBehaviour {
         bgMusicSource.Pause();
         starSource.Play();
         yield return new WaitForSeconds(10);
-        starSource.Stop();
         bgMusicSource.Play();
     }
 }
