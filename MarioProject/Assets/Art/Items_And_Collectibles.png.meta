@@ -236,7 +236,7 @@ TextureImporter:
     21300462: Items_And_Collectibles_267
     21300464: Items_And_Collectibles_268
     21300466: Items_And_Collectibles_269
-    21300468: Items_And_Collectibles_270
+    21300468: Items_And_Collectibles_4.3
     21300470: Items_And_Collectibles_271
     21300472: Items_And_Collectibles_272
     21300474: Items_And_Collectibles_273
@@ -398,9 +398,9 @@ TextureImporter:
     21300786: Items_And_Collectibles_434
     21300788: Items_And_Collectibles_435
     21300790: Items_And_Collectibles_436
-    21300792: Items_And_Collectibles_4
-    21300794: Items_And_Collectibles_5
-    21300796: Items_And_Collectibles_11
+    21300792: Items_And_Collectibles_4.1
+    21300794: Items_And_Collectibles_4.2
+    21300796: Items_And_Collectibles_4.4
     21300798: Items_And_Collectibles_12
   externalObjects: {}
   serializedVersion: 7
@@ -5164,7 +5164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_And_Collectibles_270
+      name: Items_And_Collectibles_4.3
       rect:
         serializedVersion: 2
         x: 96
@@ -8124,7 +8124,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_And_Collectibles_4
+      name: Items_And_Collectibles_4.1
       rect:
         serializedVersion: 2
         x: 96
@@ -8144,7 +8144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_And_Collectibles_5
+      name: Items_And_Collectibles_4.2
       rect:
         serializedVersion: 2
         x: 104
@@ -8164,7 +8164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_And_Collectibles_11
+      name: Items_And_Collectibles_4.4
       rect:
         serializedVersion: 2
         x: 104
