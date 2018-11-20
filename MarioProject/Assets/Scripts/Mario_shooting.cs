@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Mario_shooting : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Transform firePoint;
+    public GameObject fireBullet;
 	
 	// Update is called once per frame
 	void Update () {
