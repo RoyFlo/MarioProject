@@ -15994,9 +15994,19 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114565771907486190, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1906007502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f22fc485b5ff894992f62a8b309bd43, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1906007502 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4567969613552242, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    type: 2}
+  m_PrefabInternal: {fileID: 1906007501}
 --- !u!1 &1906891883
 GameObject:
   m_ObjectHideFlags: 0
