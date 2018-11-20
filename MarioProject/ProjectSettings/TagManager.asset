@@ -15,6 +15,7 @@ TagManager:
   - Warp
   - playershoes
   - HitItemBlock
+  - FinalLevel
   layers:
   - Default
   - TransparentFX
