@@ -8,12 +8,12 @@ public class PipeWarp : MonoBehaviour {
     public int load;
     public GameObject player;
     public GameObject WarpZone;
-
+    public static bool warped = false;
 
 	// Use this for initialization
 	void Start ()
     {
-        
+
     }
 	
     void OnTriggerStay2D(Collider2D col)
@@ -22,21 +22,29 @@ public class PipeWarp : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
+                warped = true;
                 Application.LoadLevel(load);
+                
             }
         }
     }
 
     void OnLevelWasLoaded()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        WarpZone = GameObject.FindGameObjectWithTag("Warp");
+        if (warped == true)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            WarpZone = GameObject.FindGameObjectWithTag("Warp");
 
-        player.transform.position = WarpZone.transform.position;
+            player.transform.position = WarpZone.transform.position;
+            warped = false;
+        }
+ 
     }
 
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
 }
