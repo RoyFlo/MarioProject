@@ -37,6 +37,12 @@ public class SoundFXScript : MonoBehaviour {
             ScoreKeeper.addCoins(1);
         }
 
+        if (trig.gameObject.name.Contains("Coin")) {
+            coinSource.Play();
+            ScoreKeeper.addPoints(100);
+            ScoreKeeper.addCoins(1);
+        }
+
         if (trig.gameObject.tag == "HitItemBlock") {
             itemSource.Play();
             trig.gameObject.tag = "QBlock";
@@ -44,6 +50,7 @@ public class SoundFXScript : MonoBehaviour {
 
         if (trig.gameObject.name.Contains("Red Mushroom")) {
             growSource.Play();
+            ScoreKeeper.addPoints(500);
         }
     }
 }
