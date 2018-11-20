@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SonicBonus.unity
     guid: f24bfe7a3e9df174b9dde0eaa051023e
+  - enabled: 1
+    path: Assets/Scenes/LoadLevelScene.unity
+    guid: ab9f58b0ce84ab84fa96dbbce64044c2
+  - enabled: 1
+    path: Assets/Scenes/GameWon.unity
+    guid: 274ce6fe3346f6445b57abbe2a71f5e6
   m_configObjects: {}

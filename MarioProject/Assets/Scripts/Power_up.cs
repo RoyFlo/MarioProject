@@ -71,6 +71,14 @@ public class Power_up : MonoBehaviour {
             }
         }
     }
+    //kill mario by touching the enemy******
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
     // use this to revert back from invincible state
     private void RevertBackToNormalFromInvincible()
     {
