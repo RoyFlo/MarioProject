@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 61503201005272810}
   - component: {fileID: 50322932704164586}
   - component: {fileID: 114257497039585638}
+  - component: {fileID: 58227871806750758}
   m_Layer: 0
   m_Name: bulletBill
-  m_TagString: Enemy
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1798433194513676}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 2.761, y: -0.548, z: 0}
-  m_LocalScale: {x: 0.10102695, y: 0.111486204, z: 1}
+  m_LocalPosition: {x: 2.0027, y: -0.517, z: 0}
+  m_LocalScale: {x: 0.10102695, y: 0.10860986, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,14 +58,14 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61503201005272810
-BoxCollider2D:
+--- !u!58 &58227871806750758
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,7 +76,22 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.020021522, y: 0.0341421}
+  serializedVersion: 2
+  m_Radius: 0.4650879
+--- !u!61 &61503201005272810
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798433194513676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.15830517, y: 0.5218195}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,7 +102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 1.3951578, y: 0.08724588}
   m_EdgeRadius: 0
 --- !u!114 &114257497039585638
 MonoBehaviour:
@@ -100,6 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  bullet: {fileID: 0}
+  player: {fileID: 0}
 --- !u!212 &212578152839852288
 SpriteRenderer:
   m_ObjectHideFlags: 1

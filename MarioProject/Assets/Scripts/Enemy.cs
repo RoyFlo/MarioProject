@@ -11,12 +11,14 @@ public class Enemy : MonoBehaviour {
     public float speed = 1;
     private bool moveRight = true;
     public GameObject koopa;
+    public GameObject player;
 
     void Start () {
         myTrans = this.transform;
         myBody = this.GetComponent<Rigidbody2D>();
         myWidth = this.GetComponent<SpriteRenderer>().bounds.extents.x;
         koopa = GameObject.FindGameObjectWithTag("Koopa");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -24,6 +26,14 @@ public class Enemy : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Destroy(koopa);
+        }
+
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.GetType() == typeof(CircleCollider2D))
+        {
+            Destroy(player);
         }
     }
 

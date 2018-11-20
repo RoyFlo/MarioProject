@@ -9,11 +9,13 @@ public class BulletBill : MonoBehaviour {
     Transform myTrans;
     public float speed = 1;
     public GameObject bullet;
+    public GameObject player;
 
     void Start () {
         myTrans = this.transform;
         myBody = this.GetComponent<Rigidbody2D>();
         bullet = GameObject.FindGameObjectWithTag("Bullet");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 	
 	// Update is called once per frame
@@ -29,6 +31,13 @@ public class BulletBill : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Destroy(bullet);
+        }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.GetType() == typeof(CircleCollider2D))
+        {
+            Destroy(player);
         }
     }
 }
