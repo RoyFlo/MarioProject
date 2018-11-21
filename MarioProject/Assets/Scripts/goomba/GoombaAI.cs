@@ -5,18 +5,19 @@ using UnityEngine;
 public class GoombaAI : MonoBehaviour {
 
     public float speed = 0.5f;
-    public Transform Player;
+    private Transform Player;
     public GameObject deathAnim;
 
     // Use this for initialization
     void Start()
     {
-
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Vector3 displacement = Player.position - transform.position;
         displacement = displacement.normalized;
         if (Vector2.Distance(Player.position, transform.position) < 2.0f)
