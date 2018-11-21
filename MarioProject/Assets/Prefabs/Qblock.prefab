@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4197235955750136}
   - component: {fileID: 212793053327430606}
   - component: {fileID: 61427575596607448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OpenedQBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
