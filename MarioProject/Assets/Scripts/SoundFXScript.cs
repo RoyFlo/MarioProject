@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class SoundFXScript : MonoBehaviour {
 
-    public AudioSource jumpSource;
-    public AudioSource destroyBrickSource;
-    public AudioSource coinSource;
-    public AudioSource itemSource;
-    public AudioSource growSource;
+    public static AudioSource jumpSource;
+    public static AudioSource destroyBrickSource;
+    public static AudioSource coinSource;
+    public static AudioSource itemSource;
+    public static AudioSource growSource;
 
     public static bool isGrounded;
 
     void Start () {
+        jumpSource = GameObject.Find("JumpSource").GetComponent<AudioSource>();
+        destroyBrickSource = GameObject.Find("DestroyBrickSource").GetComponent<AudioSource>();
+        coinSource = GameObject.Find("CoinSource").GetComponent<AudioSource>();
         itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
         growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update () {

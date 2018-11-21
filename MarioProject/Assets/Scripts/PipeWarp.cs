@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PipeWarp : MonoBehaviour {
@@ -24,7 +25,7 @@ public class PipeWarp : MonoBehaviour {
             {
                 warped = true;
                 Application.LoadLevel(load);
-                
+                //SceneManager.LoadScene(load);
             }
         }
     }

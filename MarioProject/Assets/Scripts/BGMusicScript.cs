@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class BGMusicScript : MonoBehaviour {
 
+    public static AudioSource lowTimeWarning;
+    public static AudioSource starSource;
+
     public AudioSource bgMusicSource;
-    public AudioSource lowTimeWarning;
     public AudioSource exitSceneMusic;
-    public AudioSource starSource;
 
     void Start() {
+        lowTimeWarning = GameObject.Find("LowTimeSource").GetComponent<AudioSource>();
+        starSource = GameObject.Find("StarSource").GetComponent<AudioSource>();
+
         bgMusicSource.volume = 0.5f;
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void OnLevelWasLoaded() {
+        bgMusicSource = GameObject.Find("BGMusicSource").GetComponent<AudioSource>();
+        exitSceneMusic = GameObject.Find("ExitSource").GetComponent<AudioSource>();
     }
 
     void Awake() {
