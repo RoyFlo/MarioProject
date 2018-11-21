@@ -8,6 +8,13 @@ public class Mario_shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            shootBullet();
+        }
 	}
+    public void shootBullet()
+    {
+        Instantiate(fireBullet, firePoint.position, firePoint.rotation);
+    }
 }
