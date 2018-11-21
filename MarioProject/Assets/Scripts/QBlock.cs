@@ -13,7 +13,7 @@ public class QBlock : MonoBehaviour {
     }
     void update()
     {
-        power_type = Power_up.power_type;
+        //power_type = Power_up.power_type;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,6 +29,7 @@ public class QBlock : MonoBehaviour {
             }
             else
             {
+                power_type = Power_up.power_type;
                 switch (power_type)
                 {
                     case 0:
