@@ -6,6 +6,15 @@ using UnityEngine;
 //       - 
 public class QBlock : MonoBehaviour {
     private GameObject temp;
+    public int power_type;
+    void Start()
+    {
+        power_type = Power_up.power_type;
+    }
+    void update()
+    {
+        power_type = Power_up.power_type;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -20,7 +29,7 @@ public class QBlock : MonoBehaviour {
             }
             else
             {
-                switch (collision.GetComponent<Power_up>().power_type)
+                switch (power_type)
                 {
                     case 0:
                         if (gameObject.transform.parent.Find("Red Mushroom") != null)
