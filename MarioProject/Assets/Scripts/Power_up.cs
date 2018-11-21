@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Power_up : MonoBehaviour {
 
-    public int power_type;
+    public static int power_type;
     public bool isInvincible;
     public float invincible_timer;
 
@@ -14,6 +14,17 @@ public class Power_up : MonoBehaviour {
     public GameObject invincible_mario;
     public GameObject invincible_big_mario;
 
+    void Start()
+    {
+        if(power_type == 1)
+        {
+            growBigger();
+        }
+        if(power_type == 2)
+        {
+            fireUp();
+        }
+    }
 	// Update is called once per frame
 	void Update () {
         // if we are invincible, then we count down the invincible timer
