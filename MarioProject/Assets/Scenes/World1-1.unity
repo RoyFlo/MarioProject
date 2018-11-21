@@ -15915,47 +15915,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114951114014972832, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 114227483094350274, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: jumpSource
       value: 
       objectReference: {fileID: 238346577}
-    - target: {fileID: 114951114014972832, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 114227483094350274, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: destroyBrickSource
       value: 
       objectReference: {fileID: 1824593983}
-    - target: {fileID: 114951114014972832, guid: 3f22fc485b5ff894992f62a8b309bd43,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 1404615679}
-    - target: {fileID: 114804655648491468, guid: 3f22fc485b5ff894992f62a8b309bd43,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 238346577}
-    - target: {fileID: 114804655648491468, guid: 3f22fc485b5ff894992f62a8b309bd43,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 1824593983}
-    - target: {fileID: 114804655648491468, guid: 3f22fc485b5ff894992f62a8b309bd43,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 1404615679}
-    - target: {fileID: 114602140040604600, guid: 3f22fc485b5ff894992f62a8b309bd43,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 238346577}
-    - target: {fileID: 114602140040604600, guid: 3f22fc485b5ff894992f62a8b309bd43,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 1824593983}
-    - target: {fileID: 114602140040604600, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 114227483094350274, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: coinSource
       value: 
@@ -15975,17 +15945,47 @@ Prefab:
       propertyPath: coinSource
       value: 
       objectReference: {fileID: 1404615679}
-    - target: {fileID: 114227483094350274, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 114602140040604600, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: jumpSource
       value: 
       objectReference: {fileID: 238346577}
-    - target: {fileID: 114227483094350274, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 114602140040604600, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: destroyBrickSource
       value: 
       objectReference: {fileID: 1824593983}
-    - target: {fileID: 114227483094350274, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 114602140040604600, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: coinSource
+      value: 
+      objectReference: {fileID: 1404615679}
+    - target: {fileID: 114804655648491468, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: jumpSource
+      value: 
+      objectReference: {fileID: 238346577}
+    - target: {fileID: 114804655648491468, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: destroyBrickSource
+      value: 
+      objectReference: {fileID: 1824593983}
+    - target: {fileID: 114804655648491468, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: coinSource
+      value: 
+      objectReference: {fileID: 1404615679}
+    - target: {fileID: 114951114014972832, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: jumpSource
+      value: 
+      objectReference: {fileID: 238346577}
+    - target: {fileID: 114951114014972832, guid: 3f22fc485b5ff894992f62a8b309bd43,
+        type: 2}
+      propertyPath: destroyBrickSource
+      value: 
+      objectReference: {fileID: 1824593983}
+    - target: {fileID: 114951114014972832, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
       propertyPath: coinSource
       value: 
@@ -15994,19 +15994,14 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 114565771907486190, guid: 3f22fc485b5ff894992f62a8b309bd43,
+    - target: {fileID: 50785275094072092, guid: 3f22fc485b5ff894992f62a8b309bd43,
         type: 2}
-      propertyPath: firePoint
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1906007502}
+      objectReference: {fileID: 6200000, guid: 4fddddb41c1497346bb978b7998ab22c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f22fc485b5ff894992f62a8b309bd43, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &1906007502 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4567969613552242, guid: 3f22fc485b5ff894992f62a8b309bd43,
-    type: 2}
-  m_PrefabInternal: {fileID: 1906007501}
 --- !u!1 &1906891883
 GameObject:
   m_ObjectHideFlags: 0
