@@ -5,7 +5,7 @@ using UnityEngine;
 public class turCloudAI : MonoBehaviour {
 
     public float speed = 0.5f;
-    public Transform Player;
+    private Transform Player;
     public GameObject dropBomb;
     float posX = 0;
     float LocateTime = 0;
@@ -25,7 +25,7 @@ public class turCloudAI : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Vector3 displacement = Player.position - transform.position;
         displacement = displacement.normalized;
         

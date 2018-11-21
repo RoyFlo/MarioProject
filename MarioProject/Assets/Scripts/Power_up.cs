@@ -63,22 +63,20 @@ public class Power_up : MonoBehaviour {
                 Destroy(col.gameObject);
             }
             // if we have a power up, we return to normal
-            if(power_type > 0)
+            if(power_type > 0 && !isInvincible)
             {
                 RevertBackToNormalAfterCollideWithEnemy();
                 power_type = 0;
 
             }
+            if (!isInvincible)
+            {
+                if (power_type == 0)
+                    Destroy(gameObject);
+            }
         }
     }
-    //kill mario by touching the enemy******
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-        }
-    }
+
     // use this to revert back from invincible state
     private void RevertBackToNormalFromInvincible()
     {

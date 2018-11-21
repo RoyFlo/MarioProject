@@ -5026,7 +5026,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  Player: {fileID: 1565940583}
   dropBomb: {fileID: 1624166955124154, guid: 6f0ccc8e0bed014448f084dff2c16454, type: 2}
   spr:
   - {fileID: 21300000, guid: 176193946ed5e084abc3c3eec025d5b5, type: 3}
@@ -5193,7 +5192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1806969834937452, guid: 0d84c0eaeb0713c48b862da4b57df242, type: 2}
       propertyPath: m_TagString
-      value: Enemy
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 61534493350583482, guid: 0d84c0eaeb0713c48b862da4b57df242,
         type: 2}
@@ -5775,8 +5774,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1806969834937452, guid: 0d84c0eaeb0713c48b862da4b57df242,
     type: 2}
   m_PrefabInternal: {fileID: 527346066}
---- !u!70 &597488677
-CapsuleCollider2D:
+--- !u!4 &597488676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4219408037906160, guid: 0d84c0eaeb0713c48b862da4b57df242,
+    type: 2}
+  m_PrefabInternal: {fileID: 527346066}
+--- !u!68 &597488677
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5787,9 +5791,11 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.11}
-  m_Size: {x: 0.16, y: 0.02}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0.1}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.02, y: 0}
+  - {x: 0.02, y: 0}
 --- !u!1 &605851399
 GameObject:
   m_ObjectHideFlags: 0
@@ -15788,6 +15794,60 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15109408, y: 0.012508646}
   m_EdgeRadius: 0
+--- !u!1 &1877576278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877576279}
+  - component: {fileID: 1877576280}
+  m_Layer: 0
+  m_Name: goombaBody
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1877576279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877576278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 597488676}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1877576280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877576278}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.08}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.21, y: 0.01}
+  m_EdgeRadius: 0
 --- !u!1001 &1880995095
 Prefab:
   m_ObjectHideFlags: 0
@@ -15999,6 +16059,14 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 4fddddb41c1497346bb978b7998ab22c, type: 2}
+    - target: {fileID: 1697760066549146, guid: 3f22fc485b5ff894992f62a8b309bd43, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208947400802454, guid: 3f22fc485b5ff894992f62a8b309bd43, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f22fc485b5ff894992f62a8b309bd43, type: 2}
   m_IsPrefabAsset: 0

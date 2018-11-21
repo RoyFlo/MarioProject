@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212411326156946426}
   - component: {fileID: 61362332490311586}
   - component: {fileID: 114193548211809700}
-  - component: {fileID: 50463599020471884}
   - component: {fileID: 70182821007322826}
+  - component: {fileID: 50226832548393284}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Enemy
@@ -44,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50463599020471884
+--- !u!50 &50226832548393284
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
