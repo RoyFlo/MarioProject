@@ -12,12 +12,16 @@ public class SoundFXScript : MonoBehaviour {
 
     public static bool isGrounded;
 
+    private BGMusicScript bgMusic;
+
     void Start () {
         jumpSource = GameObject.Find("JumpSource").GetComponent<AudioSource>();
         destroyBrickSource = GameObject.Find("DestroyBrickSource").GetComponent<AudioSource>();
         coinSource = GameObject.Find("CoinSource").GetComponent<AudioSource>();
         itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
         growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
+
+        bgMusic = FindObjectOfType<BGMusicScript>();
 
         DontDestroyOnLoad(gameObject);
     }
@@ -28,7 +32,7 @@ public class SoundFXScript : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D trig) {
+    IEnumerator OnTriggerEnter2D(Collider2D trig) {
         if (trig.gameObject.tag == "DestroyBrick") {
             destroyBrickSource.Play();
             Destroy(trig.gameObject.transform.parent.gameObject);
@@ -56,6 +60,12 @@ public class SoundFXScript : MonoBehaviour {
         if (trig.gameObject.name.Contains("Red Mushroom")) {
             growSource.Play();
             ScoreKeeper.addPoints(500);
+        }
+
+        if (trig.gameObject.name.Contains("Star")) {
+            yield return StartCoroutine(bgMusic.playStarMusic());
+            yield return new WaitForSeconds(12);
+            bgMusic.endStarMusic();
         }
     }
 }

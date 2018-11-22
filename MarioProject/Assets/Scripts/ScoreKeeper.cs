@@ -14,13 +14,11 @@ public class ScoreKeeper : MonoBehaviour {
     private static int previousTime;
 
     void Start() {
-        Debug.Log("ScoreKeeper started");
         isFinished = false;
 
         if (SceneManager.GetActiveScene().buildIndex == 2 ||
             SceneManager.GetActiveScene().buildIndex == 4 ||
             SceneManager.GetActiveScene().buildIndex == 7) {
-            Debug.Log("bonus level reached");
             timeLeft = previousTime;
         } else {
             timeLeft = 999;
@@ -28,7 +26,6 @@ public class ScoreKeeper : MonoBehaviour {
     }
 
     void OnDisable() {
-        Debug.Log("ScoreKeeper disabled");
         previousTime = timeLeft;
     }
 
