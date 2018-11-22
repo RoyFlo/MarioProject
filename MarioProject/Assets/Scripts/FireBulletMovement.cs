@@ -6,12 +6,26 @@ public class FireBulletMovement : MonoBehaviour {
 
     public Rigidbody2D bulletRB;
     public float speed;
+    public float bulletTimer;
 	// Use this for initialization
 	void Start () {
-        bulletRB.velocity = transform.right * speed;
+        bulletRB.velocity = transform.right * speed * GameObject.Find("Fire Mario").transform.localScale.x;
 	}
+    private void Update()
+    {
+        if (bulletTimer > 0)
+        {
+            bulletTimer -= Time.deltaTime;
+        }
+        else
+            Destroy(gameObject);
+        
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collided with " + collision.transform.name);
+        if(collision.transform.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
