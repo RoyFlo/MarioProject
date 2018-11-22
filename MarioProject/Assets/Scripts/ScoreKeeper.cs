@@ -16,9 +16,10 @@ public class ScoreKeeper : MonoBehaviour {
     void Start() {
         isFinished = false;
 
-        if (SceneManager.GetActiveScene().buildIndex == 2 ||
-            SceneManager.GetActiveScene().buildIndex == 4 ||
-            SceneManager.GetActiveScene().buildIndex == 7) {
+        // TODO: Find out why this does not work on SonicBonus level only
+        // * Changing name to BonusSonic does not work
+        // * Using scene index does not work
+        if (SceneManager.GetActiveScene().name.Contains("Bonus")) {
             timeLeft = previousTime;
         } else {
             timeLeft = 999;
