@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Power_up : MonoBehaviour {
 
-    public int power_type;
+    public static int power_type;
     public bool isInvincible;
     public float invincible_timer;
 
@@ -14,6 +14,17 @@ public class Power_up : MonoBehaviour {
     public GameObject invincible_mario;
     public GameObject invincible_big_mario;
 
+    void Start()
+    {
+        if(power_type == 1)
+        {
+            growBigger();
+        }
+        if(power_type == 2)
+        {
+            fireUp();
+        }
+    }
 	// Update is called once per frame
 	void Update () {
         // if we are invincible, then we count down the invincible timer
@@ -63,22 +74,19 @@ public class Power_up : MonoBehaviour {
                 Destroy(col.gameObject);
             }
             // if we have a power up, we return to normal
-            if(power_type > 0)
+            if(power_type > 0 && !isInvincible)
             {
                 RevertBackToNormalAfterCollideWithEnemy();
                 power_type = 0;
 
             }
+            if (!isInvincible && power_type == 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-    //kill mario by touching the enemy******
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-        }
-    }
+
     // use this to revert back from invincible state
     private void RevertBackToNormalFromInvincible()
     {

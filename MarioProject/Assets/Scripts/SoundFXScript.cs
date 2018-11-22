@@ -19,7 +19,7 @@ public class SoundFXScript : MonoBehaviour {
         itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
         growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update () {

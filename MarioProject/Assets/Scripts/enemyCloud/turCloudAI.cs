@@ -25,7 +25,7 @@ public class turCloudAI : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Vector3 displacement = Player.position - transform.position;
         displacement = displacement.normalized;
         
