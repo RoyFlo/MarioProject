@@ -8,7 +8,7 @@ public class FireBulletMovement : MonoBehaviour {
     public float speed;
 	// Use this for initialization
 	void Start () {
-        bulletRB.velocity = transform.right * speed;
+        bulletRB.velocity = transform.right * speed * GameObject.Find("Fire Mario").gameObject.transform.localScale.x;
 	}
     private void OnCollisionEnter2D(Collision2D collision)
     {

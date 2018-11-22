@@ -5350,6 +5350,11 @@ Prefab:
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 50761319074170824, guid: 0d84c0eaeb0713c48b862da4b57df242,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58890948676443312, guid: 0d84c0eaeb0713c48b862da4b57df242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0d84c0eaeb0713c48b862da4b57df242, type: 2}
@@ -16133,6 +16138,14 @@ Prefab:
     - target: {fileID: 1178057345215352, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437516103102782, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240561052934630, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
