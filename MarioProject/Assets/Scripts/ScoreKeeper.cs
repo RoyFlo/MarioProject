@@ -14,6 +14,7 @@ public class ScoreKeeper : MonoBehaviour {
     private static int previousTime;
 
     void Start() {
+        Debug.Log("ScoreKeeper started");
         isFinished = false;
 
         if (SceneManager.GetActiveScene().buildIndex == 2 ||
@@ -27,6 +28,7 @@ public class ScoreKeeper : MonoBehaviour {
     }
 
     void OnDisable() {
+        Debug.Log("ScoreKeeper disabled");
         previousTime = timeLeft;
     }
 
