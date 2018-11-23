@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class SoundFXScript : MonoBehaviour {
 
-    public AudioSource jumpSource;
-    public AudioSource destroyBrickSource;
-    public AudioSource coinSource;
-    public AudioSource itemSource;
-    public AudioSource growSource;
+    public static AudioSource jumpSource;
+    public static AudioSource destroyBrickSource;
+    public static AudioSource coinSource;
+    public static AudioSource itemSource;
+    public static AudioSource growSource;
 
     public static bool isGrounded;
 
+    private BGMusicScript bgMusic;
+
     void Start () {
+        jumpSource = GameObject.Find("JumpSource").GetComponent<AudioSource>();
+        destroyBrickSource = GameObject.Find("DestroyBrickSource").GetComponent<AudioSource>();
+        coinSource = GameObject.Find("CoinSource").GetComponent<AudioSource>();
         itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
         growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
+
+        bgMusic = FindObjectOfType<BGMusicScript>();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update () {
@@ -23,7 +32,7 @@ public class SoundFXScript : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D trig) {
+    IEnumerator OnTriggerEnter2D(Collider2D trig) {
         if (trig.gameObject.tag == "DestroyBrick") {
             destroyBrickSource.Play();
             Destroy(trig.gameObject.transform.parent.gameObject);
@@ -37,6 +46,12 @@ public class SoundFXScript : MonoBehaviour {
             ScoreKeeper.addCoins(1);
         }
 
+        if (trig.gameObject.name.Contains("Coin")) {
+            coinSource.Play();
+            ScoreKeeper.addPoints(100);
+            ScoreKeeper.addCoins(1);
+        }
+
         if (trig.gameObject.tag == "HitItemBlock") {
             itemSource.Play();
             trig.gameObject.tag = "QBlock";
@@ -44,6 +59,13 @@ public class SoundFXScript : MonoBehaviour {
 
         if (trig.gameObject.name.Contains("Red Mushroom")) {
             growSource.Play();
+            ScoreKeeper.addPoints(500);
+        }
+
+        if (trig.gameObject.name.Contains("Star")) {
+            yield return StartCoroutine(bgMusic.playStarMusic());
+            yield return new WaitForSeconds(12);
+            bgMusic.endStarMusic();
         }
     }
 }

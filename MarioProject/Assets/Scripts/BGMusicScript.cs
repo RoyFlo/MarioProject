@@ -33,7 +33,11 @@ public class BGMusicScript : MonoBehaviour {
     public IEnumerator playStarMusic() {
         bgMusicSource.Pause();
         starSource.Play();
-        yield return new WaitForSeconds(10);
+        yield return null;
+    }
+
+    public void endStarMusic() {
+        starSource.Stop();
         bgMusicSource.Play();
     }
 }

@@ -17,6 +17,7 @@ public class GoombaAI : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Vector3 displacement = Player.position - transform.position;
         displacement = displacement.normalized;
         if (Vector2.Distance(Player.position, transform.position) < 2.0f)

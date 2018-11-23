@@ -16,6 +16,7 @@ TagManager:
   - playershoes
   - HitItemBlock
   - FinalLevel
+  - Death
   layers:
   - Default
   - TransparentFX
