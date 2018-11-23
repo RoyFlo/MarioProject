@@ -54,6 +54,7 @@ public class Death_respawn : MonoBehaviour
         {
             health = health - 1;
             ScoreKeeper.livesLeft = health;
+            Power_up.power_type = 0;
         }
         
         if(health >= 1)
