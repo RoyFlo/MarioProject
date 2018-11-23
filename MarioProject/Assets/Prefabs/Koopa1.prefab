@@ -150,8 +150,6 @@ MonoBehaviour:
   speed: 0.5
   koopa: {fileID: 0}
   player: {fileID: 0}
-  collider1: {fileID: 0}
-  collider2: {fileID: 0}
 --- !u!212 &212575154269551636
 SpriteRenderer:
   m_ObjectHideFlags: 1
