@@ -6951,7 +6951,7 @@ MonoBehaviour:
   health: 0
   Player: {fileID: 0}
   bonus: 1
-  warped: 0
+  warped: 1
   WarpZone: {fileID: 0}
 --- !u!4 &1414716606
 Transform:
