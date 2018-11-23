@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ice_lvl.unity
     guid: 8f6f13d20edef99488719294c4fbba1b
   - enabled: 1
+    path: Assets/Scenes/iceBonus.unity
+    guid: ede3852f875a0b04b96e1d0b160df98a
+  - enabled: 1
     path: Assets/Scenes/Lvl4.unity
     guid: 8181af7308ebc57479dcce3675b0acc6
   - enabled: 1
