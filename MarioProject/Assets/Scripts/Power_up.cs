@@ -22,6 +22,7 @@ public class Power_up : MonoBehaviour {
         }
         if(power_type == 2)
         {
+            normal_mario.SetActive(false);
             fireUp();
         }
     }
