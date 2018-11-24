@@ -40,4 +40,8 @@ public class BGMusicScript : MonoBehaviour {
         starSource.Stop();
         bgMusicSource.Play();
     }
+
+    public void stopMusic() {
+        bgMusicSource.Stop();
+    }
 }

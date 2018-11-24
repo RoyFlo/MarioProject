@@ -10,15 +10,17 @@ public class ScoreKeeper : MonoBehaviour {
     public static int livesLeft = 3;
     public static int timeLeft;
     public static bool isFinished;
+    public static bool isDead;
 
     private static int previousTime;
 
     void Start() {
         isFinished = false;
+        isDead = false;
 
         // TODO: Find out why this does not work on SonicBonus level only
         // * Changing name to BonusSonic does not work
-        // * Using scene index does not work
+        // * Using scene index does not 
         if (SceneManager.GetActiveScene().name.Contains("Bonus")) {
             timeLeft = previousTime;
         } else {

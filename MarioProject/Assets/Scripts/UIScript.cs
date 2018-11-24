@@ -34,8 +34,8 @@ public class UIScript : MonoBehaviour {
                 // End game
             }
 
-            // How to stop timer when player finishes level
-            if(ScoreKeeper.isFinished) {
+            // Stops timer when player finishes level or dies
+            if(ScoreKeeper.isFinished || ScoreKeeper.isDead) {
                 yield break;
             }
         }

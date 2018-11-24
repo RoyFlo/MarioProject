@@ -15,6 +15,6 @@ public class Mario_shooting : MonoBehaviour {
 	}
     public void shootBullet()
     {
-        Instantiate(fireBullet, firePoint.position, firePoint.rotation);
+        Instantiate(fireBullet, firePoint.position, Quaternion.identity);
     }
 }
