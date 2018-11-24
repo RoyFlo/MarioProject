@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Death_respawn : MonoBehaviour
-{
+public class Death_respawn : MonoBehaviour {
     public AudioSource DeadPlumberJumping;
     //public GameObject respawn;
     public int respawn;
@@ -18,53 +17,46 @@ public class Death_respawn : MonoBehaviour
     public GameObject WarpZone;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         health = ScoreKeeper.livesLeft;
         hasDied = false;
     }
 
     // Update is called once per frame
     // I can add in some stuff about the player health but I think jacky said he already had something with it
-    void Update()
-    {
+    void Update() {
         Player = GameObject.FindGameObjectWithTag("Player");
         warped = PipeWarp.warped;
-        if(bonus == true)
-        {
+        if (bonus == true) {
             warped = true;
             PipeWarp.warped = true;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag== "Player")
-        {
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.tag == "Player") {
             Debug.Log("Death of the instant variety");
             hasDied = true;
+            ScoreKeeper.isDead = true;
             StartCoroutine("DIE");
         }
 
     }
 
-    IEnumerator DIE()
-    {
-        if (bonus == false)
-        {
+    IEnumerator DIE() {
+        if (bonus == false) {
             health = health - 1;
             ScoreKeeper.livesLeft = health;
+            Power_up.power_type = 0;
         }
-        
-        if(health >= 1)
-        {
-            yield return new WaitForSeconds(1);
+
+        if (health >= 1) {
+            yield return new WaitForSeconds(3);
             Application.LoadLevel(respawn);
             yield return null;
         }
-        if (health <= 0)
-        {
-            yield return new WaitForSeconds(1);
+        if (health <= 0) {
+            yield return new WaitForSeconds(3);
             Application.LoadLevel(DEAD);
             yield return null;
         }
