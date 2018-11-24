@@ -21,7 +21,7 @@ public class UIScript : MonoBehaviour {
         StartCoroutine("LoseTime");
         isPaused = false;
     }
-    
+
     IEnumerator LoseTime() {
         while (!isPaused) {
             yield return new WaitForSeconds(0.5f);
@@ -30,12 +30,12 @@ public class UIScript : MonoBehaviour {
                 bgMusic.LowTime();
             }
 
-            if(ScoreKeeper.timeLeft == 0) {
+            if (ScoreKeeper.timeLeft == 0) {
                 // End game
             }
 
             // Stops timer when player finishes level or dies
-            if(ScoreKeeper.isFinished || ScoreKeeper.isDead) {
+            if (ScoreKeeper.isFinished || ScoreKeeper.isDead) {
                 yield break;
             }
         }
@@ -45,12 +45,12 @@ public class UIScript : MonoBehaviour {
         }
     }
 
-    void Update () {
+    void Update() {
         worldTextField.text = LoadLevelScript.topBarLevelName;
         scoreTextField.text = addToStartOfString(ScoreKeeper.score.ToString(), 6);
         coinsCollectedTextField.text = "x" + addToStartOfString(ScoreKeeper.coins.ToString(), 2);
         timeLeftTextField.text = addToStartOfString(ScoreKeeper.timeLeft.ToString(), 3);
-	}
+    }
 
     private string addToStartOfString(string s, int digitCount) {
         return s.PadLeft(digitCount, '0');

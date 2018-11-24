@@ -15,7 +15,7 @@ public class SoundFXScript : MonoBehaviour {
 
     private BGMusicScript bgMusic;
 
-    void Start () {
+    void Start() {
         jumpSource = GameObject.Find("JumpSource").GetComponent<AudioSource>();
         destroyBrickSource = GameObject.Find("DestroyBrickSource").GetComponent<AudioSource>();
         coinSource = GameObject.Find("CoinSource").GetComponent<AudioSource>();
@@ -28,7 +28,7 @@ public class SoundFXScript : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    void Update () {
+    void Update() {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
             jumpSource.Play();
         }
