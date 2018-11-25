@@ -28,7 +28,7 @@ public class UIScript : MonoBehaviour {
         while (!isPaused) {
             yield return new WaitForSeconds(0.5f);
             ScoreKeeper.timeLeft--;
-            if (ScoreKeeper.timeLeft == 150) {
+            if (ScoreKeeper.timeLeft == 100) {
                 bgMusic.LowTime();
             }
 

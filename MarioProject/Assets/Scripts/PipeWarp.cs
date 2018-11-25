@@ -23,13 +23,15 @@ public class PipeWarp : MonoBehaviour {
         }
     }
 	
-    void OnTriggerStay2D(Collider2D col)
+    IEnumerator OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 warped = true;
+                SoundFXScript.Warp();
+                yield return new WaitForSeconds(1);
                 Application.LoadLevel(load);
                 
             }
