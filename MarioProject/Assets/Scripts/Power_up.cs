@@ -14,7 +14,7 @@ public class Power_up : MonoBehaviour {
     public GameObject invincible_mario;
     public GameObject invincible_big_mario;
 
-    void Start()
+    void OnLevelWasLoaded()
     {
         if(power_type == 1)
         {
@@ -22,6 +22,7 @@ public class Power_up : MonoBehaviour {
         }
         if(power_type == 2)
         {
+            normal_mario.SetActive(false);
             fireUp();
         }
     }

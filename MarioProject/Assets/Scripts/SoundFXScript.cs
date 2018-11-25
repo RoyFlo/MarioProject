@@ -9,24 +9,26 @@ public class SoundFXScript : MonoBehaviour {
     public static AudioSource coinSource;
     public static AudioSource itemSource;
     public static AudioSource growSource;
+    public static AudioSource deathSource;
 
     public static bool isGrounded;
 
     private BGMusicScript bgMusic;
 
-    void Start () {
+    void Start() {
         jumpSource = GameObject.Find("JumpSource").GetComponent<AudioSource>();
         destroyBrickSource = GameObject.Find("DestroyBrickSource").GetComponent<AudioSource>();
         coinSource = GameObject.Find("CoinSource").GetComponent<AudioSource>();
         itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
         growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
+        deathSource = GameObject.Find("DeathSource").GetComponent<AudioSource>();
 
         bgMusic = FindObjectOfType<BGMusicScript>();
 
         DontDestroyOnLoad(gameObject);
     }
 
-    void Update () {
+    void Update() {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
             jumpSource.Play();
         }
@@ -66,6 +68,11 @@ public class SoundFXScript : MonoBehaviour {
             yield return StartCoroutine(bgMusic.playStarMusic());
             yield return new WaitForSeconds(12);
             bgMusic.endStarMusic();
+        }
+
+        if (trig.gameObject.name.Contains("DeathStuff")) {
+            bgMusic.stopMusic();
+            deathSource.Play();
         }
     }
 }
