@@ -13,9 +13,11 @@ public class UIScript : MonoBehaviour {
     private bool isPaused;
 
     BGMusicScript bgMusic;
+    SoundFXScript soundFXScript;
 
     void Start() {
         bgMusic = FindObjectOfType<BGMusicScript>();
+        soundFXScript = FindObjectOfType<SoundFXScript>();
         ScoreKeeper.timeLeft = 999;
         ScoreKeeper.isFinished = false;
         StartCoroutine("LoseTime");
@@ -31,7 +33,10 @@ public class UIScript : MonoBehaviour {
             }
 
             if (ScoreKeeper.timeLeft == 0) {
-                // End game
+                ScoreKeeper.livesLeft -= 1;
+                soundFXScript.playDeathSound();
+                yield return new WaitForSeconds(3);
+                LevelManager.ReloadScene();
             }
 
             // Stops timer when player finishes level or dies

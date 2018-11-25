@@ -71,8 +71,12 @@ public class SoundFXScript : MonoBehaviour {
         }
 
         if (trig.gameObject.name.Contains("DeathStuff")) {
-            bgMusic.stopMusic();
-            deathSource.Play();
+            playDeathSound();
         }
+    }
+
+    public void playDeathSound() {
+        bgMusic.stopMusic();
+        deathSource.Play();
     }
 }
