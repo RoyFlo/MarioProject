@@ -22,4 +22,13 @@ public class BombExpl : MonoBehaviour {
             Instantiate(explos, transform.position, new Quaternion(0, 0, 0, 0));
         }
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            Destroy(gameObject);
+            Instantiate(explos, transform.position, Quaternion.Euler(0, 0, 0));
+        }
+    }
 }

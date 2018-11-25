@@ -4891,7 +4891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1806969834937452, guid: 0d84c0eaeb0713c48b862da4b57df242, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Goomba
       objectReference: {fileID: 0}
     - target: {fileID: 61534493350583482, guid: 0d84c0eaeb0713c48b862da4b57df242,
         type: 2}
