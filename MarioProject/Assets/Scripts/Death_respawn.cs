@@ -34,7 +34,7 @@ public class Death_respawn : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (col.tag == "Player") {
+        if (col.tag == "Player" && !hasDied) {
             Debug.Log("Death of the instant variety");
             hasDied = true;
             ScoreKeeper.isDead = true;
