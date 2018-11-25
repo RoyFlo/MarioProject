@@ -86,6 +86,14 @@ public class Power_up : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+
+        if (col.gameObject.tag == "Goomba")
+        {
+            if (isInvincible)
+            {
+                Destroy(col.gameObject);
+            }
+        }
     }
 
     // use this to revert back from invincible state
