@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public static int previousLevel;
-
     public string nextLevel;
     public string nextLevelName;
     public string topBarNextLevelName;
     public string livesLeft;
 
-    private static int currentLevel;
     private BoxCollider2D exitCollider;
 
     BGMusicScript bgMusic;
@@ -20,8 +17,6 @@ public class LevelManager : MonoBehaviour {
     void Start() {
         bgMusic = FindObjectOfType<BGMusicScript>();
         exitCollider = GameObject.Find("Exit").GetComponent<BoxCollider2D>();
-        previousLevel = 0;
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D collider) {
