@@ -13212,7 +13212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeadPlumberJumping: {fileID: 0}
   respawn: 9
-  DEAD: 10
+  DEAD: 11
   hasDied: 0
   health: 0
   Player: {fileID: 0}
