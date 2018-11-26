@@ -56,6 +56,7 @@ public class Death_respawn : MonoBehaviour {
             if (!gameObject.name.Contains("BonusExit")) {
                 yield return new WaitForSeconds(3);
             }
+            ScoreKeeper.resetTimer();
             Application.LoadLevel(respawn);
             yield return null;
         }
