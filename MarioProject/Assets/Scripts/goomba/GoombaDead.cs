@@ -10,7 +10,7 @@ public class GoombaDead : MonoBehaviour {
     public float frameRate = 12.0f;
     
     public AudioClip deathSound;
-    
+
     private float counter = 0.0f;
     private int i = 0;
     private SpriteRenderer rend;
