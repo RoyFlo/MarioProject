@@ -18,6 +18,7 @@ TagManager:
   - FinalLevel
   - Death
   - Goomba
+  - Bullet
   layers:
   - Default
   - TransparentFX
