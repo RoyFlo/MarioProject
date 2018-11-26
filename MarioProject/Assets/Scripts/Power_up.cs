@@ -36,9 +36,8 @@ public class Power_up : MonoBehaviour {
         // when invincible time out, we return to normal, and reset the invincible timer.
         if(invincible_timer < 0.0f)
         {
-            isInvincible = false;
-            RevertBackToNormalFromInvincible();
             invincible_timer = 12;
+            RevertBackToNormalFromInvincible();
         }
     }
 
@@ -47,6 +46,12 @@ public class Power_up : MonoBehaviour {
         //check if collied with a power up and update the power type accordingly
         if(col.gameObject.tag == "Power Up")
         {
+            if(col.gameObject.name.Contains("Coin"))
+            {
+                ScoreKeeper.addCoins(1);
+                ScoreKeeper.addPoints(100);
+            } else
+                ScoreKeeper.addPoints(250);
             if(col.gameObject.name.Contains("Red Mushroom") && power_type == 0)
             {
                 power_type = 1;
@@ -68,12 +73,6 @@ public class Power_up : MonoBehaviour {
         //check if collided with enemy
         if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log("Collided with enemy and power_type is " + power_type);
-            // if we are invincible, then the enemy die.
-            if (isInvincible)
-            {
-                Destroy(col.gameObject);
-            }
             // if we have a power up, we return to normal
             if(power_type > 0 && !isInvincible)
             {
@@ -86,21 +85,13 @@ public class Power_up : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
-
-        if (col.gameObject.tag == "Goomba")
-        {
-            if (isInvincible)
-            {
-                Destroy(col.gameObject);
-            }
-        }
     }
 
     // use this to revert back from invincible state
     private void RevertBackToNormalFromInvincible()
     {
         GameObject oldMario = null;
-        Debug.Log("we were: " + power_type);
+
         switch (power_type)
         {
             case 0: oldMario = normal_mario; break;
@@ -157,7 +148,7 @@ public class Power_up : MonoBehaviour {
             case 1: oldMario = big_mario; break;
             case 2: oldMario = fire_mario; break;
         }
-        Debug.Log("we were " + oldMario.name);
+
         normal_mario.transform.position = oldMario.transform.position;
         oldMario.SetActive(false);
         normal_mario.SetActive(true);       
