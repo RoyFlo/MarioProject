@@ -406,28 +406,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114179807319020366, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &87480748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1437516103102782, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-    type: 2}
-  m_PrefabInternal: {fileID: 87480747}
---- !u!114 &87480749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 87480748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ea284e646a30e40928eb49c1f9bb4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeadPlumberJumping: {fileID: 0}
-  hasDied: 0
-  health: 0
 --- !u!1 &90243573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3064,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.5312805, y: 0}
+  m_Offset: {x: 7.7985497, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3093,7 +3075,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.062561, y: 1}
+  m_Size: {x: 16.5971, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &769579541
 GameObject:
