@@ -9673,25 +9673,6 @@ Transform:
   m_Father: {fileID: 1345951814}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1170815334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1437516103102782, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-    type: 2}
-  m_PrefabInternal: {fileID: 1906007501}
---- !u!114 &1170815335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170815334}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 883471f0d6b546a4aa0b675aa456b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeadPlumberJumping: {fileID: 0}
-  hasDied: 0
-  health: 0
 --- !u!1 &1176753004
 GameObject:
   m_ObjectHideFlags: 0
@@ -15216,104 +15197,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114009446374902010, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114009446374902010, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114009446374902010, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114387129354083648, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114387129354083648, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114387129354083648, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114642968300780152, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114642968300780152, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114642968300780152, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114174583497047574, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114174583497047574, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114174583497047574, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209005489813992, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: jumpSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209005489813992, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: destroyBrickSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209005489813992, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: coinSource
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1178057345215352, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1240561052934630, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437516103102782, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61619003021377556, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114295485534115380, guid: d24dc10eaf73c2449a2b8425d03c91ce,
-        type: 2}
-      propertyPath: fireBullet
-      value: 
-      objectReference: {fileID: 1490433809387876, guid: 47f50c0a1c105614ab64a43f10c790eb,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_IsPrefabAsset: 0
