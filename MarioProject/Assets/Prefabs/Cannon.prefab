@@ -112,7 +112,7 @@ MonoBehaviour:
   LocateTime: 0
   LocateNeedTime: 3
   ShootingTime: 1
-  ShootingNeedTime: 1
+  ShootingNeedTime: 3
 --- !u!212 &212802885332724658
 SpriteRenderer:
   m_ObjectHideFlags: 1
