@@ -18,7 +18,6 @@ public class UIScript : MonoBehaviour {
     void Start() {
         bgMusic = FindObjectOfType<BGMusicScript>();
         soundFXScript = FindObjectOfType<SoundFXScript>();
-        ScoreKeeper.timeLeft = 999;
         ScoreKeeper.isFinished = false;
         StartCoroutine("LoseTime");
         isPaused = false;

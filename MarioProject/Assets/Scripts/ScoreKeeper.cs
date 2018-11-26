@@ -8,7 +8,7 @@ public class ScoreKeeper : MonoBehaviour {
     public static int score = 0;
     public static int coins = 0;
     public static int livesLeft = 3;
-    public static int timeLeft;
+    public static int timeLeft = 999;
     public static bool isFinished;
     public static bool isDead;
 
@@ -18,15 +18,7 @@ public class ScoreKeeper : MonoBehaviour {
         isFinished = false;
         isDead = false;
 
-        // TODO: Find out why this does not work on SonicBonus level only
-        // * Changing name to BonusSonic does not work
-        // * Using scene index does not 
-        if (SceneManager.GetActiveScene().name.Contains("Bonus")) {
-            timeLeft = previousTime;
-        }
-        else {
-            timeLeft = 999;
-        }
+        DontDestroyOnLoad(gameObject);
     }
 
     void OnDisable() {
@@ -91,5 +83,9 @@ public class ScoreKeeper : MonoBehaviour {
 
     public static void resetCoins() {
         coins = 0;
+    }
+
+    public static void resetTimer() {
+        timeLeft = 999;
     }
 }
