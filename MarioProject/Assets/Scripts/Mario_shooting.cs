@@ -5,13 +5,14 @@ using UnityEngine;
 public class Mario_shooting : MonoBehaviour {
     public Transform firePoint;
     public GameObject fireBullet;
+    public float numberOfBullet;
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if(GameObject.FindGameObjectsWithTag("Bullet").Length < 3)
-            shootBullet();
+            if(GameObject.FindGameObjectsWithTag("Bullet").Length < numberOfBullet)
+                shootBullet();
         }
 	}
     public void shootBullet()
