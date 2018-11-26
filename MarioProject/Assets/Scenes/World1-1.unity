@@ -15439,7 +15439,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4611711451620640, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1178057345215352, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
       propertyPath: m_Name
@@ -15472,8 +15472,13 @@ Prefab:
       propertyPath: death
       value: 
       objectReference: {fileID: 1643089893}
-    m_RemovedComponents:
-    - {fileID: 114179807319020366, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
+    - target: {fileID: 114067642391024894, guid: d24dc10eaf73c2449a2b8425d03c91ce,
+        type: 2}
+      propertyPath: Mario_Die
+      value: 
+      objectReference: {fileID: 1406753843834830, guid: 46b3630ffb1656444849e8f54c9d283f,
+        type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1906891883
@@ -15729,7 +15734,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4052419185796610, guid: 8f19b632d02499740ac0b49832b1f690, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 61835404017857410, guid: 8f19b632d02499740ac0b49832b1f690,
         type: 2}

@@ -2187,10 +2187,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114179807319020366, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &702742180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1437516103102782, guid: d24dc10eaf73c2449a2b8425d03c91ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 702742179}
+--- !u!114 &702742181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702742180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ea284e646a30e40928eb49c1f9bb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeadPlumberJumping: {fileID: 0}
+  hasDied: 0
+  health: 0
 --- !u!1001 &705769189
 Prefab:
   m_ObjectHideFlags: 0
