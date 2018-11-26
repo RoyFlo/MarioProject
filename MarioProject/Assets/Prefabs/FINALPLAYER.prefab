@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 114132799739504970}
   - component: {fileID: 114067642391024894}
   - component: {fileID: 61619003021377556}
+  - component: {fileID: 114179807319020366}
   m_Layer: 0
   m_Name: UpdatedPlayer
   m_TagString: Player
@@ -125,6 +126,7 @@ GameObject:
   - component: {fileID: 61499303081747532}
   - component: {fileID: 58200025666862904}
   - component: {fileID: 70735975839163774}
+  - component: {fileID: 114157998442443444}
   m_Layer: 0
   m_Name: Invincible Big Mario
   m_TagString: Player
@@ -251,6 +253,7 @@ GameObject:
   - component: {fileID: 58730548477475962}
   - component: {fileID: 114885579034518396}
   - component: {fileID: 114008374060339780}
+  - component: {fileID: 114998097163238706}
   m_Layer: 0
   m_Name: Invincible small mario
   m_TagString: Player
@@ -393,7 +396,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178057345215352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.88058877, y: -0.43467534, z: 0}
+  m_LocalPosition: {x: -1.236, y: -0.701, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4910142892503328}
@@ -1040,7 +1043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power_type: 0
   isInvincible: 1
   invincible_timer: 12
   normal_mario: {fileID: 1437516103102782}
@@ -1059,11 +1061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640b2f2e0a721942be7ff00dbff060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSource: {fileID: 0}
-  destroyBrickSource: {fileID: 0}
-  coinSource: {fileID: 0}
-  itemSource: {fileID: 0}
-  growSource: {fileID: 0}
 --- !u!114 &114043870435037814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1095,7 +1092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power_type: 1
   isInvincible: 1
   invincible_timer: 12
   normal_mario: {fileID: 1437516103102782}
@@ -1114,7 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power_type: 0
   isInvincible: 0
   invincible_timer: 10
   normal_mario: {fileID: 1437516103102782}
@@ -1142,6 +1137,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   grounded: 0
+--- !u!114 &114157998442443444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465374893014894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2a84e9ee75d37429a2fd990008e0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114174583497047574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1153,11 +1159,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640b2f2e0a721942be7ff00dbff060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSource: {fileID: 0}
-  destroyBrickSource: {fileID: 0}
-  coinSource: {fileID: 0}
-  itemSource: {fileID: 0}
-  growSource: {fileID: 0}
+--- !u!114 &114179807319020366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437516103102782}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883471f0d6b546a4aa0b675aa456b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeadPlumberJumping: {fileID: 0}
+  hasDied: 0
+  health: 0
 --- !u!114 &114209005489813992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1169,11 +1184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640b2f2e0a721942be7ff00dbff060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSource: {fileID: 0}
-  destroyBrickSource: {fileID: 0}
-  coinSource: {fileID: 0}
-  itemSource: {fileID: 0}
-  growSource: {fileID: 0}
 --- !u!114 &114295485534115380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,7 +1196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4309492851113650}
-  fireBullet: {fileID: 1980867999933266, guid: 16ee87a9df4a4da459a03d19a366ebc2, type: 2}
+  fireBullet: {fileID: 1490433809387876, guid: 47f50c0a1c105614ab64a43f10c790eb, type: 2}
+  numberOfBullet: 4
 --- !u!114 &114327147316648044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,11 +1267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640b2f2e0a721942be7ff00dbff060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSource: {fileID: 0}
-  destroyBrickSource: {fileID: 0}
-  coinSource: {fileID: 0}
-  itemSource: {fileID: 0}
-  growSource: {fileID: 0}
 --- !u!114 &114535698847454126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1272,7 +1278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power_type: 1
   isInvincible: 0
   invincible_timer: 10
   normal_mario: {fileID: 1437516103102782}
@@ -1309,11 +1314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640b2f2e0a721942be7ff00dbff060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSource: {fileID: 0}
-  destroyBrickSource: {fileID: 0}
-  coinSource: {fileID: 0}
-  itemSource: {fileID: 0}
-  growSource: {fileID: 0}
 --- !u!114 &114830246316844850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1325,7 +1325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912e79cd1e790a54db1ea7cdcc1f6361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power_type: 2
   isInvincible: 0
   invincible_timer: 10
   normal_mario: {fileID: 1437516103102782}
@@ -1371,6 +1370,17 @@ MonoBehaviour:
   ceilingCheckRad: 0.1
   touchedCeiling: 0
   isCrouching: 0
+--- !u!114 &114998097163238706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816494709039598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2a84e9ee75d37429a2fd990008e0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212004305773584334
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -38,19 +38,6 @@ public class PipeWarp : MonoBehaviour {
         }
     }
 
-    //void OnLevelWasLoaded()
-    //{
-    //    if (warped == true)
-    //    {
-    //        player = GameObject.FindGameObjectWithTag("Player");
-    //        WarpZone = GameObject.FindGameObjectWithTag("Warp");
-
-    //        player.transform.position = WarpZone.transform.position;
-    //        warped = false;
-    //    }
-
-    //}
-
     // Update is called once per frame
     void Update () {
 		

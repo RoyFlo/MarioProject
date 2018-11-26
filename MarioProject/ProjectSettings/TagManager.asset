@@ -17,6 +17,8 @@ TagManager:
   - HitItemBlock
   - FinalLevel
   - Death
+  - Goomba
+  - Bullet
   layers:
   - Default
   - TransparentFX

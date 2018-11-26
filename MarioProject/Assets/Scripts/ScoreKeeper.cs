@@ -43,14 +43,7 @@ public class ScoreKeeper : MonoBehaviour {
     }
 
     public static void addCoins(int newCoins) {
-        /*
-        if (coins + newCoins <= 99) {
-            coins += newCoins;
-        }
-        else {
-            coins = 99;
-        }
-        */
+
         if (coins + newCoins >= 100) {
             addLives(1);
             coins += newCoins - 100;
