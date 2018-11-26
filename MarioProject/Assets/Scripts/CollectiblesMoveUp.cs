@@ -29,7 +29,10 @@ public class CollectiblesMoveUp : MonoBehaviour {
             {
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
             }
-            //           gameObject.transform.SetParent(null);
+            if (gameObject.name.Contains("Coin"))
+            {
+                Destroy(gameObject);
+            }
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
             gameObject.GetComponent<CollectiblesMoveUp>().enabled = false;
         }

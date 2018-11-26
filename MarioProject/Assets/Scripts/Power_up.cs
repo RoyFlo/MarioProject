@@ -46,6 +46,12 @@ public class Power_up : MonoBehaviour {
         //check if collied with a power up and update the power type accordingly
         if(col.gameObject.tag == "Power Up")
         {
+            if(col.gameObject.name.Contains("Coin"))
+            {
+                ScoreKeeper.addCoins(1);
+                ScoreKeeper.addPoints(100);
+            } else
+                ScoreKeeper.addPoints(250);
             if(col.gameObject.name.Contains("Red Mushroom") && power_type == 0)
             {
                 power_type = 1;
