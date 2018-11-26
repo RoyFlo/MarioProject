@@ -120,7 +120,8 @@ MonoBehaviour:
   spawnDelay: 5
   bulletBill: {fileID: 1798433194513676}
   originalPos: {x: 0, y: 0, z: 0}
-  bulletBlaster: {fileID: 0}
+  bulletBlaster: {fileID: 1413934547390788, guid: 8e09aeb8ec3f0d646b6f804beb893734,
+    type: 2}
   bulletCount: 0
 --- !u!114 &114257497039585638
 MonoBehaviour:
