@@ -1184,6 +1184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4309492851113650}
   fireBullet: {fileID: 1490433809387876, guid: 47f50c0a1c105614ab64a43f10c790eb, type: 2}
+  numberOfBullet: 4
 --- !u!114 &114327147316648044
 MonoBehaviour:
   m_ObjectHideFlags: 1
