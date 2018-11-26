@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public static int previousLevel;
-
     public string nextLevel;
     public string nextLevelName;
     public string topBarNextLevelName;
@@ -19,7 +17,6 @@ public class LevelManager : MonoBehaviour {
     void Start() {
         bgMusic = FindObjectOfType<BGMusicScript>();
         exitCollider = GameObject.Find("Exit").GetComponent<BoxCollider2D>();
-        previousLevel = 0;
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D collider) {
@@ -37,6 +34,10 @@ public class LevelManager : MonoBehaviour {
         LoadLevelScript.topBarLevelName = topBarNextLevelName;
         LoadLevelScript.livesLeft = livesLeft;
 
+        SceneManager.LoadScene("LoadLevelScene");
+    }
+
+    public static void ReloadScene() {
         SceneManager.LoadScene("LoadLevelScene");
     }
 }

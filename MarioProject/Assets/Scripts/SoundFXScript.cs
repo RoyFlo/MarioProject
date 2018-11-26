@@ -10,6 +10,8 @@ public class SoundFXScript : MonoBehaviour {
     public static AudioSource itemSource;
     public static AudioSource growSource;
     public static AudioSource deathSource;
+    public static AudioSource oneUpSource;
+    public static AudioSource warpSource;
 
     public static bool isGrounded;
 
@@ -22,6 +24,8 @@ public class SoundFXScript : MonoBehaviour {
         itemSource = GameObject.Find("ItemSource").GetComponent<AudioSource>();
         growSource = GameObject.Find("GrowSource").GetComponent<AudioSource>();
         deathSource = GameObject.Find("DeathSource").GetComponent<AudioSource>();
+        oneUpSource = GameObject.Find("OneUpSource").GetComponent<AudioSource>();
+        warpSource = GameObject.Find("WarpSource").GetComponent<AudioSource>();
 
         bgMusic = FindObjectOfType<BGMusicScript>();
 
@@ -71,8 +75,20 @@ public class SoundFXScript : MonoBehaviour {
         }
 
         if (trig.gameObject.name.Contains("DeathStuff")) {
-            bgMusic.stopMusic();
-            deathSource.Play();
+            playDeathSound();
         }
+    }
+
+    public void playDeathSound() {
+        bgMusic.stopMusic();
+        deathSource.Play();
+    }
+
+    public static void OneUp() {
+        oneUpSource.Play();
+    }
+
+    public static void Warp() {
+        warpSource.Play();
     }
 }
