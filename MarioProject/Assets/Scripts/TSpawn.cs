@@ -16,16 +16,16 @@ public class TSpawn : MonoBehaviour {
         bulletCount = 0;
         bulletBlaster = GameObject.FindGameObjectWithTag("Bullet Blaster");
         originalPos = bulletBlaster.transform.position;
-        InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
+        while (bulletCount < 5)
+        {
+            InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
+        }
     }
     public void SpawnObject()
     {
-        if (bulletCount < 10)
-        {
             transform.eulerAngles = new Vector3(0, -180, 0);
             Instantiate(bulletBill, originalPos, transform.rotation);
             bulletCount++;
-        }
     }
 }
 
