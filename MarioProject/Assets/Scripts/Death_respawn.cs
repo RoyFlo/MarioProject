@@ -38,7 +38,7 @@ public class Death_respawn : MonoBehaviour {
             Debug.Log("Death of the instant variety");
             hasDied = true;
             ScoreKeeper.isDead = true;
-            StartCoroutine(DIE());
+            StartCoroutine("DIE");
         }
 
     }

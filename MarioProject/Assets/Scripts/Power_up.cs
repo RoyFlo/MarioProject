@@ -14,8 +14,6 @@ public class Power_up : MonoBehaviour {
     public GameObject invincible_mario;
     public GameObject invincible_big_mario;
 
-    public Death_respawn death;
-
     void OnLevelWasLoaded()
     {
         if(power_type == 1)
@@ -85,8 +83,6 @@ public class Power_up : MonoBehaviour {
             if (!isInvincible && power_type == 0)
             {
                 Destroy(gameObject);
-                ScoreKeeper.isDead = true;
-                death.StartCoroutine(death.DIE());
             }
         }
     }
