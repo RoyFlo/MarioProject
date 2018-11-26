@@ -30,26 +30,12 @@ public class PipeWarp : MonoBehaviour {
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 warped = true;
-                SoundFXScript.Warp();
                 yield return new WaitForSeconds(1);
                 Application.LoadLevel(load);
                 
             }
         }
     }
-
-    //void OnLevelWasLoaded()
-    //{
-    //    if (warped == true)
-    //    {
-    //        player = GameObject.FindGameObjectWithTag("Player");
-    //        WarpZone = GameObject.FindGameObjectWithTag("Warp");
-
-    //        player.transform.position = WarpZone.transform.position;
-    //        warped = false;
-    //    }
-
-    //}
 
     // Update is called once per frame
     void Update () {

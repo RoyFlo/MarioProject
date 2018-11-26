@@ -11,18 +11,25 @@ public class LevelManager : MonoBehaviour {
     public string livesLeft;
 
     private BoxCollider2D exitCollider;
+    private bool wasTimeAdded;
 
     BGMusicScript bgMusic;
 
     void Start() {
         bgMusic = FindObjectOfType<BGMusicScript>();
         exitCollider = GameObject.Find("Exit").GetComponent<BoxCollider2D>();
+        wasTimeAdded = false;
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D collider) {
         Debug.Log(exitCollider.tag);
         bgMusic.ExitScene();
         yield return new WaitForSeconds(6);
+        if (!wasTimeAdded) {
+            ScoreKeeper.addPoints(ScoreKeeper.timeLeft);
+            wasTimeAdded = true;
+        }
+        ScoreKeeper.resetTimer();
 
         if (exitCollider.tag == "FinalLevel") {
             SceneManager.LoadScene("GameWon");

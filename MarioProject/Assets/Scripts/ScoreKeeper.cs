@@ -8,29 +8,15 @@ public class ScoreKeeper : MonoBehaviour {
     public static int score = 0;
     public static int coins = 0;
     public static int livesLeft = 3;
-    public static int timeLeft;
+    public static int timeLeft = 999;
     public static bool isFinished;
     public static bool isDead;
-
-    private static int previousTime;
 
     void Start() {
         isFinished = false;
         isDead = false;
 
-        // TODO: Find out why this does not work on SonicBonus level only
-        // * Changing name to BonusSonic does not work
-        // * Using scene index does not 
-        if (SceneManager.GetActiveScene().name.Contains("Bonus")) {
-            timeLeft = previousTime;
-        }
-        else {
-            timeLeft = 999;
-        }
-    }
-
-    void OnDisable() {
-        previousTime = timeLeft;
+        DontDestroyOnLoad(gameObject);
     }
 
     public static void addPoints(int points) {
@@ -43,16 +29,8 @@ public class ScoreKeeper : MonoBehaviour {
     }
 
     public static void addCoins(int newCoins) {
-        /*
-        if (coins + newCoins <= 99) {
-            coins += newCoins;
-        }
-        else {
-            coins = 99;
-        }
-        */
         if (coins + newCoins >= 100) {
-            addLives(1);
+            addLife();
             coins += newCoins - 100;
             SoundFXScript.OneUp();
         }
@@ -61,21 +39,12 @@ public class ScoreKeeper : MonoBehaviour {
         }
     }
 
-    public static void addLives(int newLives) {
+    public static void addLife(int newLives = 1) {
         if (livesLeft + newLives <= 99) {
             livesLeft += newLives;
         }
         else {
             livesLeft = 99;
-        }
-    }
-
-    public static void removeCoins(int coinsSpent) {
-        if (coins - coinsSpent <= 0) {
-            coins = 0;
-        }
-        else {
-            coins -= coinsSpent;
         }
     }
 
@@ -98,5 +67,9 @@ public class ScoreKeeper : MonoBehaviour {
 
     public static void resetCoins() {
         coins = 0;
+    }
+
+    public static void resetTimer() {
+        timeLeft = 999;
     }
 }

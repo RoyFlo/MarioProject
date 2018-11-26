@@ -54,8 +54,6 @@ public class SoundFXScript : MonoBehaviour {
 
         if (trig.gameObject.name.Contains("Coin")) {
             coinSource.Play();
-            ScoreKeeper.addPoints(100);
-            ScoreKeeper.addCoins(1);
         }
 
         if (trig.gameObject.tag == "HitItemBlock") {
@@ -76,6 +74,16 @@ public class SoundFXScript : MonoBehaviour {
 
         if (trig.gameObject.name.Contains("DeathStuff")) {
             playDeathSound();
+        }
+
+        if (trig.gameObject.name.Contains("BonusExit")) {
+            Warp();
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D trig) {
+        if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && trig.gameObject.name.Contains("WarpPipe")) {
+            Warp();
         }
     }
 

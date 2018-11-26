@@ -18,7 +18,7 @@ public class PlayerCrouch : MonoBehaviour {
         if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             isCrouching = true;
-            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<CapsuleCollider2D>().enabled = true;

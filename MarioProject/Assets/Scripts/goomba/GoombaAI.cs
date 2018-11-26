@@ -7,6 +7,7 @@ public class GoombaAI : MonoBehaviour {
     public float speed = 0.5f;
     public Transform Player;
     public GameObject deathAnim;
+    private bool addScore = false;
 
     // Use this for initialization
     void Start()
@@ -35,6 +36,11 @@ public class GoombaAI : MonoBehaviour {
             //Destroy(col.gameObject);
             Destroy(gameObject);
             Instantiate(deathAnim, transform.position, Quaternion.Euler(0, 0, 0));
+            if (!addScore)
+            {
+                ScoreKeeper.addPoints(250);
+                addScore = true;
+            }
         }
         /*
         if (col.tag == "Player")
