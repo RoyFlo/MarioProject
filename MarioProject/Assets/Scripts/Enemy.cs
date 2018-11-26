@@ -32,14 +32,15 @@ public class Enemy : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-     //   if (collision.collider.GetType() == typeof(CircleCollider2D))
-     //   {
-     //       m_someOtherScriptOnAnotherGameObject.DIE();
-     //   }
+        if (collision.collider.GetType() == typeof(CircleCollider2D))
+        {
+            m_someOtherScriptOnAnotherGameObject.DIE();
+            Destroy(player);
+        }
      //   if (collision.collider.GetType() == typeof(BoxCollider2D))
      //   {
      //      m_someOtherScriptOnAnotherGameObject.DIE();
-            Destroy(player);
+     //       Destroy(player);
      //   }
     }
 

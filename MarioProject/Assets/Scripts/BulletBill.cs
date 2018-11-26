@@ -40,9 +40,10 @@ public class BulletBill : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetType() == typeof(CircleCollider2D))
+        if (collision.collider.GetType() == typeof(CircleCollider2D) && collision.gameObject.tag == "Player")
         {
-            m_someOtherScriptOnAnotherGameObject.DIE();
+            Destroy(player);
+            //m_someOtherScriptOnAnotherGameObject.DIE();
         }
     }
 }
