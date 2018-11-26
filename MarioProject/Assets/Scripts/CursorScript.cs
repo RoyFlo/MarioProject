@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CursorScript : MonoBehaviour {
 
@@ -9,11 +10,13 @@ public class CursorScript : MonoBehaviour {
     public GameObject bottomCursor;
     public AudioSource soundSource;
     public string nextSceneLoad;
+    public Text finalScore;
 
     private GameObject activeCursor;
 
     void Start() {
         activeCursor = topCursor;
+        finalScore.text = "Final Score: " + addToString(ScoreKeeper.score.ToString(), 6);
     }
 
     void Update () {
@@ -49,4 +52,8 @@ public class CursorScript : MonoBehaviour {
             }
         }
 	}
+
+    private string addToString(string s, int digits) {
+        return s.PadLeft(digits, '0');
+    }
 }
