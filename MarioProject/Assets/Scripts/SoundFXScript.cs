@@ -54,8 +54,6 @@ public class SoundFXScript : MonoBehaviour {
 
         if (trig.gameObject.name.Contains("Coin")) {
             coinSource.Play();
-            ScoreKeeper.addPoints(100);
-            ScoreKeeper.addCoins(1);
         }
 
         if (trig.gameObject.tag == "HitItemBlock") {
