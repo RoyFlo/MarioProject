@@ -37,7 +37,9 @@ public class CursorScript : MonoBehaviour {
 
         if(Input.GetKeyDown("space")) {
             if (activeCursor == topCursor) {
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                ScoreKeeper.resetCoins();
+                ScoreKeeper.resetLives();
+                ScoreKeeper.resetScore();
                 SceneManager.LoadScene(nextSceneLoad);
             }
 
