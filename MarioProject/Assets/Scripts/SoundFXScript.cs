@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundFXScript : MonoBehaviour {
 
@@ -33,7 +34,12 @@ public class SoundFXScript : MonoBehaviour {
     }
 
     void Update() {
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
+        if (isGrounded && 
+            Input.GetKeyDown(KeyCode.Space) && 
+            SceneManager.GetActiveScene().buildIndex != 0 &&
+            SceneManager.GetActiveScene().buildIndex != 10 &&
+            SceneManager.GetActiveScene().buildIndex != 11) 
+        {
             jumpSource.Play();
         }
     }
