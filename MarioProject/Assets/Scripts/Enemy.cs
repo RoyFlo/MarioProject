@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
     private bool moveRight = true;
     public GameObject koopa;
     public GameObject player;
+    public Death_respawn m_someOtherScriptOnAnotherGameObject;
 
     void Start () {
         myTrans = this.transform;
@@ -31,18 +32,23 @@ public class Enemy : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetType() == typeof(CircleCollider2D))
-        {
+     //   if (collision.collider.GetType() == typeof(CircleCollider2D))
+     //   {
+     //       m_someOtherScriptOnAnotherGameObject.DIE();
+     //   }
+     //   if (collision.collider.GetType() == typeof(BoxCollider2D))
+     //   {
+     //      m_someOtherScriptOnAnotherGameObject.DIE();
             Destroy(player);
-        }
+     //   }
     }
 
     void FixedUpdate() {
-        RaycastHit2D groundInfo = Physics2D.Raycast(myTrans.position, Vector2.up, 2f);
+     //   RaycastHit2D groundInfo = Physics2D.Raycast(myTrans.position, Vector2.up, 2f);
         //Check if there is ground in front of the enemy
-        Vector2 lineCastPos = myTrans.position - myTrans.right * myWidth;
-        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
-        bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
+     //   Vector2 lineCastPos = myTrans.position - myTrans.right * myWidth;
+     //   Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
+     //   bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
         //       bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2());
         //No ground, turn around
         //       if (!isGrounded)
@@ -55,18 +61,18 @@ public class Enemy : MonoBehaviour {
         Vector2 myVelocity = myBody.velocity;
         myVelocity.x = -myTrans.right.x * speed;
         myBody.velocity = myVelocity;
-        if (groundInfo.collider == false)
-        {
-            if(moveRight == true)
-            {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                moveRight = false;
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                moveRight = true;
-            }
-        }
+     //   if (groundInfo.collider == false)
+     //   {
+     //       if(moveRight == true)
+     //       {
+     //           transform.eulerAngles = new Vector3(0, -180, 0);
+     //           moveRight = false;
+     //       }
+     //       else
+     //      {
+     //           transform.eulerAngles = new Vector3(0, 0, 0);
+     //           moveRight = true;
+     //       }
+     //   }
 	}
 }
