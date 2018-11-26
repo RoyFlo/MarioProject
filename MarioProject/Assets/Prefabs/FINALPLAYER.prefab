@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 61499303081747532}
   - component: {fileID: 58200025666862904}
   - component: {fileID: 70735975839163774}
+  - component: {fileID: 114157998442443444}
   m_Layer: 0
   m_Name: Invincible Big Mario
   m_TagString: Player
@@ -252,6 +253,7 @@ GameObject:
   - component: {fileID: 58730548477475962}
   - component: {fileID: 114885579034518396}
   - component: {fileID: 114008374060339780}
+  - component: {fileID: 114998097163238706}
   m_Layer: 0
   m_Name: Invincible small mario
   m_TagString: Player
@@ -1135,6 +1137,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   grounded: 0
+--- !u!114 &114157998442443444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465374893014894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2a84e9ee75d37429a2fd990008e0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114174583497047574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1357,6 +1370,17 @@ MonoBehaviour:
   ceilingCheckRad: 0.1
   touchedCeiling: 0
   isCrouching: 0
+--- !u!114 &114998097163238706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816494709039598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2a84e9ee75d37429a2fd990008e0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212004305773584334
 SpriteRenderer:
   m_ObjectHideFlags: 1
