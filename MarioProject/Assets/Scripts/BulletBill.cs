@@ -10,6 +10,7 @@ public class BulletBill : MonoBehaviour {
     public float speed = 1;
     public GameObject bullet;
     public GameObject player;
+    public Death_respawn m_someOtherScriptOnAnotherGameObject;
 
     void Start () {
         myTrans = this.transform;
@@ -37,7 +38,7 @@ public class BulletBill : MonoBehaviour {
     {
         if (collision.collider.GetType() == typeof(CircleCollider2D))
         {
-            Destroy(player);
+            m_someOtherScriptOnAnotherGameObject.DIE();
         }
     }
 }
