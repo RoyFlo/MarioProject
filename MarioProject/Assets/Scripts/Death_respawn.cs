@@ -43,7 +43,7 @@ public class Death_respawn : MonoBehaviour {
 
     }
 
-    IEnumerator DIE() {
+    public IEnumerator DIE() {
         if (bonus == false) {
             health = health - 1;
             ScoreKeeper.livesLeft = health;
