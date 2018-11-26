@@ -72,8 +72,9 @@ public class SoundFXScript : MonoBehaviour {
             bgMusic.endStarMusic();
         }
 
-        if (trig.gameObject.name.Contains("DeathStuff")) {
+        if (trig.gameObject.name.Contains("DeathStuff") || trig.gameObject.name.Contains("goombaBody")) {
             playDeathSound();
+            yield return new WaitForSeconds(3);
         }
 
         if (trig.gameObject.name.Contains("BonusExit")) {
