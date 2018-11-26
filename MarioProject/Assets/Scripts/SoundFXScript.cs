@@ -79,7 +79,6 @@ public class SoundFXScript : MonoBehaviour {
         }
 
         if (trig.gameObject.name.Contains("DeathStuff") || trig.gameObject.name.Contains("goombaBody")) {
-            Debug.Log("Death sound should play");
             playDeathSound();
             yield return new WaitForSeconds(3);
         }
