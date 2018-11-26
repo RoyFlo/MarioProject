@@ -7604,7 +7604,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1330617362227570, guid: 12b6c09a4e1088e41a53522bfe8e13ba, type: 2}
       propertyPath: m_Name
-      value: warpPipe
+      value: WarpPipe
       objectReference: {fileID: 0}
     - target: {fileID: 114511252967998946, guid: 12b6c09a4e1088e41a53522bfe8e13ba,
         type: 2}

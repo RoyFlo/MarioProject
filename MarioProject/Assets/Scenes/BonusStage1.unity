@@ -7451,7 +7451,7 @@ GameObject:
   - component: {fileID: 1414716605}
   - component: {fileID: 1414716604}
   m_Layer: 0
-  m_Name: DeathStuff
+  m_Name: BonusExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

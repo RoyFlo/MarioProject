@@ -670,7 +670,7 @@ MonoBehaviour:
   bottomCursor: {fileID: 2071623834}
   soundSource: {fileID: 457163512}
   nextSceneLoad: LoadLevelScene
-  finalScore: {fileID: 0}
+  finalScore: {fileID: 770524537}
 --- !u!1 &336567022
 GameObject:
   m_ObjectHideFlags: 0
