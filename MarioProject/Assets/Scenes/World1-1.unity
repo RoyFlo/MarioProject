@@ -15472,6 +15472,12 @@ Prefab:
       propertyPath: death
       value: 
       objectReference: {fileID: 1643089893}
+    - target: {fileID: 114067642391024894, guid: d24dc10eaf73c2449a2b8425d03c91ce,
+        type: 2}
+      propertyPath: Mario_Die
+      value: 
+      objectReference: {fileID: 1406753843834830, guid: 46b3630ffb1656444849e8f54c9d283f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_IsPrefabAsset: 0
