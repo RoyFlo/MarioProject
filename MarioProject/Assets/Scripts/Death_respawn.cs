@@ -37,7 +37,9 @@ public class Death_respawn : MonoBehaviour {
         if (col.tag == "Player" && !hasDied) {
             Debug.Log("Death of the instant variety");
             hasDied = true;
-            ScoreKeeper.isDead = true;
+            if (!gameObject.name.Contains("BonusExit")) {
+                ScoreKeeper.isDead = true;
+            }
             StartCoroutine("DIE");
         }
 
@@ -51,7 +53,9 @@ public class Death_respawn : MonoBehaviour {
         }
 
         if (health >= 1) {
-            yield return new WaitForSeconds(3);
+            if (!gameObject.name.Contains("BonusExit")) {
+                yield return new WaitForSeconds(3);
+            }
             Application.LoadLevel(respawn);
             yield return null;
         }

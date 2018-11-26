@@ -30,7 +30,6 @@ public class PipeWarp : MonoBehaviour {
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 warped = true;
-                SoundFXScript.Warp();
                 yield return new WaitForSeconds(1);
                 Application.LoadLevel(load);
                 

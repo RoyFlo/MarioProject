@@ -77,6 +77,16 @@ public class SoundFXScript : MonoBehaviour {
         if (trig.gameObject.name.Contains("DeathStuff")) {
             playDeathSound();
         }
+
+        if (trig.gameObject.name.Contains("BonusExit")) {
+            Warp();
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D trig) {
+        if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && trig.gameObject.name.Contains("WarpPipe")) {
+            Warp();
+        }
     }
 
     public void playDeathSound() {
