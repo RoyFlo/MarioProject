@@ -16,7 +16,7 @@ public class SoundFXScript : MonoBehaviour {
 
     public static bool isGrounded;
 
-    private BGMusicScript bgMusic;
+    private static BGMusicScript bgMusic;
 
     void Start() {
         jumpSource = GameObject.Find("JumpSource").GetComponent<AudioSource>();
@@ -78,10 +78,12 @@ public class SoundFXScript : MonoBehaviour {
             bgMusic.endStarMusic();
         }
 
+        /*
         if (trig.gameObject.name.Contains("DeathStuff") || trig.gameObject.name.Contains("goombaBody")) {
             playDeathSound();
             yield return new WaitForSeconds(3);
         }
+        */
 
         if (trig.gameObject.name.Contains("BonusExit")) {
             Warp();
@@ -94,7 +96,7 @@ public class SoundFXScript : MonoBehaviour {
         }
     }
 
-    public void playDeathSound() {
+    public static void playDeathSound() {
         bgMusic.stopMusic();
         deathSource.Play();
     }
