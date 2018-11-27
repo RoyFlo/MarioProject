@@ -79,6 +79,7 @@ public class Power_up : MonoBehaviour {
             // if we have a power up, we return to normal
             if(power_type > 0 && !isInvincible)
             {
+                SoundFXScript.playShrinkSound();
                 RevertBackToNormalAfterCollideWithEnemy();
                 power_type = 0;
 

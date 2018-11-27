@@ -13,6 +13,7 @@ public class SoundFXScript : MonoBehaviour {
     public static AudioSource deathSource;
     public static AudioSource oneUpSource;
     public static AudioSource warpSource;
+    public static AudioSource shrinkSource;
 
     public static bool isGrounded;
 
@@ -27,6 +28,9 @@ public class SoundFXScript : MonoBehaviour {
         deathSource = GameObject.Find("DeathSource").GetComponent<AudioSource>();
         oneUpSource = GameObject.Find("OneUpSource").GetComponent<AudioSource>();
         warpSource = GameObject.Find("WarpSource").GetComponent<AudioSource>();
+        shrinkSource = GameObject.Find("ShrinkSource").GetComponent<AudioSource>();
+        shrinkSource.time = 1;
+        shrinkSource.pitch = -1;
 
         bgMusic = FindObjectOfType<BGMusicScript>();
 
@@ -78,13 +82,6 @@ public class SoundFXScript : MonoBehaviour {
             bgMusic.endStarMusic();
         }
 
-        /*
-        if (trig.gameObject.name.Contains("DeathStuff") || trig.gameObject.name.Contains("goombaBody")) {
-            playDeathSound();
-            yield return new WaitForSeconds(3);
-        }
-        */
-
         if (trig.gameObject.name.Contains("BonusExit")) {
             Warp();
         }
@@ -94,6 +91,10 @@ public class SoundFXScript : MonoBehaviour {
         if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && trig.gameObject.name.Contains("WarpPipe")) {
             Warp();
         }
+    }
+
+    public static void playShrinkSound() {
+        shrinkSource.Play();
     }
 
     public static void playDeathSound() {
