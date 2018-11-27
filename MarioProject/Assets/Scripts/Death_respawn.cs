@@ -63,6 +63,7 @@ public class Death_respawn : MonoBehaviour {
         }
         if (health <= 0) {
             yield return new WaitForSeconds(3);
+            LoadLevelScript.loadNewGame();
             Application.LoadLevel(DEAD);
             yield return null;
         }

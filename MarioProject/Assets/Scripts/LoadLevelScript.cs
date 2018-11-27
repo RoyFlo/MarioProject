@@ -35,4 +35,11 @@ public class LoadLevelScript : MonoBehaviour {
     private string addToStartOfString(string s, int digitCount) {
         return s.PadLeft(digitCount, '0');
     }
+
+    public static void loadNewGame() {
+        nextLevelScene = "World1-1";
+        levelName = "World 1-1";
+        topBarLevelName = "1-1";
+        livesLeft = "x 03";
+    }
 }
