@@ -83,8 +83,10 @@ public class Power_up : MonoBehaviour {
                 power_type = 0;
 
             }
-            if (!isInvincible && power_type == 0)
+            if (!isInvincible && power_type == 0 && !death.hasDied)
             {
+                death.hasDied = true;
+                ScoreKeeper.isDead = true;
                 Destroy(gameObject);
                 Instantiate(Mario_Die, transform.position, new Quaternion(0, 0, 0, 0));
                 death.StartCoroutine(death.DIE());
