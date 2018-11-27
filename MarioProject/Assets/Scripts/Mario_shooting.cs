@@ -11,13 +11,13 @@ public class Mario_shooting : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if(GameObject.FindGameObjectsWithTag("Bullet").Length < numberOfBullet)
+            if(GameObject.FindGameObjectsWithTag("Fire").Length < numberOfBullet)
                 shootBullet();
         }
 	}
     public void shootBullet()
     {
         GameObject bulletObject = Instantiate(fireBullet, firePoint.position, Quaternion.identity);
-        bulletObject.tag = "Bullet";
+        bulletObject.tag = "Fire";
     }
 }
