@@ -33,17 +33,17 @@ public class BulletBill : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.tag == "Player")
         {
-            Destroy(bullet);
+            Destroy(gameObject);
         }
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.GetType() == typeof(CircleCollider2D) && collision.gameObject.tag == "Player")
-        {
-            Destroy(player);
-            //m_someOtherScriptOnAnotherGameObject.DIE();
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.collider.GetType() == typeof(CircleCollider2D) && collision.gameObject.tag == "Player")
+    //    {
+    //        Destroy(player);
+    //        //m_someOtherScriptOnAnotherGameObject.DIE();
+    //    }
+    //}
 }
