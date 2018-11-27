@@ -54,6 +54,7 @@ public class Death_respawn : MonoBehaviour {
 
         if (health >= 1) {
             if (!gameObject.name.Contains("BonusExit")) {
+                SoundFXScript.playDeathSound();
                 yield return new WaitForSeconds(3);
             }
             ScoreKeeper.resetTimer();
