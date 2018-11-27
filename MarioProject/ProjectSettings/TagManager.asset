@@ -19,6 +19,8 @@ TagManager:
   - Death
   - Goomba
   - Bullet
+  - Bullet Blaster
+  - Fire
   layers:
   - Default
   - TransparentFX
