@@ -74,10 +74,8 @@ public class Power_up : MonoBehaviour {
             Destroy(col.gameObject);
         }
         //check if collided with enemy
-        if (col.gameObject.tag == "Enemy" && !death.hasDied)
+        if (col.gameObject.tag == "Enemy")
         {
-            death.hasDied = true;
-            ScoreKeeper.isDead = true;
             // if we have a power up, we return to normal
             if(power_type > 0 && !isInvincible)
             {
