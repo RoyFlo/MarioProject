@@ -19,10 +19,7 @@ public class BulletBill : MonoBehaviour {
         bullet = GameObject.FindGameObjectWithTag("Bullet");
         player = GameObject.FindGameObjectWithTag("Player");
 
-     //   for (int i = 0; i < 20; i++)
-     //   {
-     //       ExecuteAfterTime(1);
-     //   }
+ 
     }
     // Update is called once per frame
     void Update () {
@@ -38,12 +35,5 @@ public class BulletBill : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.collider.GetType() == typeof(CircleCollider2D) && collision.gameObject.tag == "Player")
-    //    {
-    //        Destroy(player);
-    //        //m_someOtherScriptOnAnotherGameObject.DIE();
-    //    }
-    //}
+
 }
