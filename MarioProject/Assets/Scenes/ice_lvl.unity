@@ -500,6 +500,19 @@ Prefab:
       propertyPath: death
       value: 
       objectReference: {fileID: 758210790}
+    - target: {fileID: 1437516103102782, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240561052934630, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114295485534115380, guid: d24dc10eaf73c2449a2b8425d03c91ce,
+        type: 2}
+      propertyPath: numberOfBullet
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24dc10eaf73c2449a2b8425d03c91ce, type: 2}
   m_IsPrefabAsset: 0
@@ -8956,7 +8969,7 @@ Prefab:
     - target: {fileID: 114244402352228484, guid: 45f6b68e7d6756b4cb9a2a0568c07bb2,
         type: 2}
       propertyPath: ShootingNeedTime
-      value: 2
+      value: 2.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45f6b68e7d6756b4cb9a2a0568c07bb2, type: 2}
