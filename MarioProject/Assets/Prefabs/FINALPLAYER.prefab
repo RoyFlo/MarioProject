@@ -764,7 +764,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00227502, y: 0.08341719}
+  m_Offset: {x: 0.00227502, y: 0.08049294}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -775,7 +775,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12814981, y: 0.13799885}
+  m_Size: {x: 0.12814981, y: 0.13215035}
   m_EdgeRadius: 0
 --- !u!70 &70009879128795140
 CapsuleCollider2D:
@@ -1050,6 +1050,8 @@ MonoBehaviour:
   fire_mario: {fileID: 1240561052934630}
   invincible_mario: {fileID: 1816494709039598}
   invincible_big_mario: {fileID: 1465374893014894}
+  death: {fileID: 0}
+  Mario_Die: {fileID: 0}
 --- !u!114 &114009446374902010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1099,6 +1101,8 @@ MonoBehaviour:
   fire_mario: {fileID: 1240561052934630}
   invincible_mario: {fileID: 1816494709039598}
   invincible_big_mario: {fileID: 1465374893014894}
+  death: {fileID: 0}
+  Mario_Die: {fileID: 0}
 --- !u!114 &114067642391024894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1117,6 +1121,8 @@ MonoBehaviour:
   fire_mario: {fileID: 1240561052934630}
   invincible_mario: {fileID: 1816494709039598}
   invincible_big_mario: {fileID: 1465374893014894}
+  death: {fileID: 0}
+  Mario_Die: {fileID: 1406753843834830, guid: 46b3630ffb1656444849e8f54c9d283f, type: 2}
 --- !u!114 &114132799739504970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1285,6 +1291,8 @@ MonoBehaviour:
   fire_mario: {fileID: 1240561052934630}
   invincible_mario: {fileID: 1816494709039598}
   invincible_big_mario: {fileID: 1465374893014894}
+  death: {fileID: 0}
+  Mario_Die: {fileID: 0}
 --- !u!114 &114593765330178794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1332,6 +1340,8 @@ MonoBehaviour:
   fire_mario: {fileID: 1240561052934630}
   invincible_mario: {fileID: 1816494709039598}
   invincible_big_mario: {fileID: 1465374893014894}
+  death: {fileID: 0}
+  Mario_Die: {fileID: 0}
 --- !u!114 &114885579034518396
 MonoBehaviour:
   m_ObjectHideFlags: 1
